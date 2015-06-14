@@ -37,17 +37,18 @@ $on-laptop:        800px;
 //     }
 // }
 @mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
+	@media screen and (max-width: $device) {
+		@content;
+	}
 }
 
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        // "base",
-        // "layout",
-        // "syntax-highlighting",
-        "../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss"
+	"bootstrap-variables",
+	"../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss",
+	"layout"
+	// "base",
+	// "syntax-highlighting",
 ;
