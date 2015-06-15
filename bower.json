@@ -1,0 +1,17 @@
+{
+  "name": "Vernilac",
+  "version": "0.0.0",
+  "homepage": "https://github.com/gparas/Vernilac",
+  "description": "vernilac site",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "~3.3.4"
+  }
+}

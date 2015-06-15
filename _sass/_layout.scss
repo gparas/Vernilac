@@ -1,7 +1,77 @@
-// Site Header
+$bgc-masthead:	#47454B;
+$bgc-teaser:	rgba(28, 149, 150, 0.8);
+
+
+// = Site Header
+// --------------------------------------------------------------
 
 .masthead{
-    margin-top: $navbar-height;
+	background-color: $bgc-masthead;
+	background-position: 50%;
+	background-size: cover;
+	margin-top: $navbar-height;
+	padding: 100px 0;
+	color: #fff;
+	text-align: center;
+
+	h1{
+		color: inherit;
+
+		@media (min-width: $grid-float-breakpoint){
+			font-size: 42px;
+			line-height: 52px;
+		}
+	}
+}
+
+// Image backgrounds
+
+.bg-hero-home{
+	background-image:url("/img/hero-home.jpg");
+}
+
+
+// = Block Styling
+// --------------------------------------------------------------
+
+.teaser{
+	background-color: $bgc-teaser;
+	width: 80%;
+	margin: 0 auto;
+	padding: 1px;
+
+	@media (min-width: $grid-float-breakpoint){
+		width: 50%;
+	}
+}
+
+.block{
+	padding: 60px 0;
+
+	.block-title, .block-subtitle{
+		text-align: center;
+	}
+
+	.block-subtitle{
+		font-size: 16px;
+		margin-bottom: 50px;
+	}
+}
+
+// = Adjustment margins
+// --------------------------------------------------------------
+
+.mg-clear{
+	margin:0;
+}
+.mg-sm{
+	margin-bottom:10px;
+}
+.mg-md{
+	margin-bottom:30px;
+}
+.mg-lg{
+	margin-bottom:50px;
 }
 
 
