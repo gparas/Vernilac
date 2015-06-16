@@ -1,0 +1,10 @@
+---
+layout: post
+title:  Ferodur primer
+subtitle: 
+thumbnail: primer-metal-3.jpg 
+categories: primer-metal
+weight : 3
+---
+
+Αστάρι μετάλλων διαλύτου – Μονωτικό ρύπων και λεκέδων για τοίχους

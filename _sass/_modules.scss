@@ -1,0 +1,30 @@
+// = Product list
+// --------------------------------------------------------------
+
+.products{
+	margin-bottom: 80px;
+	min-height: 150px;
+
+	.product-subtitle{
+		font-size: 12px;
+		letter-spacing: 0.065em;
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+
+	.product-title{
+		font-size: 19px;
+	}
+}
+
+.text-emulsion, .text-primer{
+	color: $state-info-text;
+}
+
+.text-acrylic{
+	color: $state-warning-text;
+}
+
+hr.separator{
+	margin-bottom: 80px;
+}

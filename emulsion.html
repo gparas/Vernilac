@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<div class="block block-featured bg-hero-emulsion">
+	<div class="container">
+		<div class="teaser">
+			<h1>Πλαστικά χρώματα</h1>
+			<p class="lead">Πλαστικά χρώματα κορυφαίας ποιότητας</p>
+		</div>
+	</div>
+</div>
+
+{% assign products = site.categories.emulsion | sort: 'weight' %}
+
+<div class="block">
+	<div class="container">
+		{% include product-list.html %}
+	</div>
+</div>

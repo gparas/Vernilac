@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<div class="block block-featured bg-hero-metal">
+	<div class="container">
+		<div class="teaser">
+			<h1>Μεταλλικές Επιφάνειες</h1>
+			<p class="lead">Μεγάλη γκάμα χρωμάτων για μεταλλικές επιφάνειες.</p>
+		</div>
+	</div>
+</div>
+
+
+<div class="block">
+	<div class="container">
+		
+		{% assign products = site.categories.metal | sort: 'weight' %}
+		
+		<h3 class="block-title">Βερνικοχρώματα</h3>
+		<div class="block-subtitle">Κορυφαίας ποιότητας</div>
+		
+		{% include product-list.html %}
+
+		<hr class="separator">
+		
+		{% assign products = site.categories.primer-metal | sort: 'weight' %}
+
+		<h3 class="block-title">Αστάρια βερνικοχρωμάτων</h3>
+		<div class="block-subtitle">Κορυφαίας ποιότητας</div>
+		
+		{% include product-list.html %}
+
+	</div>
+</div>

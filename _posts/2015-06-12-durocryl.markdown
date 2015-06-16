@@ -1,0 +1,10 @@
+---
+layout: post
+title:  Durocryl
+subtitle: 
+thumbnail: acrylic-7.jpg 
+categories: acrylic
+weight : 7
+---
+
+100% Ακρυλικό επαγγελματικό χρώμα εξωτερικής χρήσης.

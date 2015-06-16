@@ -1,0 +1,10 @@
+---
+layout: post
+title:  Velatura primer
+subtitle: 
+thumbnail: primer-wood.jpg 
+categories: primer-wood
+weight : 1
+---
+
+Αστάρι διαλύτου για βερνικοχρώματα

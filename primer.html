@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<div class="block block-featured bg-hero-primer">
+	<div class="container">
+		<div class="teaser">
+			<h1>Υποστρώματα - Αστάρια</h1>
+			<p class="lead">Κορυφαίας ποιότητας</p>
+		</div>
+	</div>
+</div>
+
+{% assign products = site.categories.primer | sort: 'weight' %}
+
+<div class="block">
+	<div class="container">
+		{% include product-list.html %}
+	</div>
+</div>

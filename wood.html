@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<div class="block block-featured bg-hero-wood">
+	<div class="container">
+		<div class="teaser">
+			<h1>Ξύλινες Επιφάνειες</h1>
+			<p class="lead">Προϊόντα για βαφή εσωτερικών και εξωτερικών επιφανειών</p>
+		</div>
+	</div>
+</div>
+
+
+<div class="block">
+	<div class="container">
+		
+		{% assign products = site.categories.wood | sort: 'weight' %}
+		
+		<h3 class="block-title">Βερνικοχρώματα</h3>
+		<div class="block-subtitle">Κορυφαίας ποιότητας</div>
+		
+		{% include product-list.html %}
+
+		<hr class="separator">
+		
+		{% assign products = site.categories.primer-wood | sort: 'weight' %}
+
+		<h3 class="block-title">Αστάρια βερνικοχρωμάτων</h3>
+		<div class="block-subtitle">Κορυφαίας ποιότητας</div>
+		
+		{% include product-list.html %}
+
+	</div>
+</div>

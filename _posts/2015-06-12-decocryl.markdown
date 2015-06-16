@@ -1,0 +1,10 @@
+---
+layout: post
+title:  Decocryl
+subtitle: 
+thumbnail: acrylic-8.jpg 
+categories: acrylic
+weight : 8
+---
+
+Ακρυλικό χρώμα γενικής χρήσης κατάλληλο για συχνό βάψιμο εξωτερικών όψεων.

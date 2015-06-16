@@ -1,0 +1,10 @@
+---
+layout: post
+title:  Rust lock
+subtitle: 
+thumbnail: enamel-3.jpg 
+categories: metal
+weight : 1
+---
+
+Γυαλιστερό χρώμα ειδικό για να βάφει απευθείας επάνω στην σκουριά.

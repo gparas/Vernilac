@@ -1,0 +1,10 @@
+---
+layout: post
+title:  Veradur
+subtitle: A-100
+thumbnail: primer-3.jpg 
+categories: primer
+weight : 3
+---
+
+100% ακρυλικό αστάρι γενικής χρήσης

@@ -1,0 +1,10 @@
+---
+layout: post
+title:  Durocoat
+subtitle: 
+thumbnail: primer-7.jpg 
+categories: primer
+weight : 7
+---
+
+Αδιάβροχο ακρυλικό υπόστρωμα διαλύτου

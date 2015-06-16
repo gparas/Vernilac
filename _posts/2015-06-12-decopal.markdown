@@ -1,0 +1,10 @@
+---
+layout: post
+title:  Decopal
+subtitle: 
+thumbnail: emulsion-8.jpg 
+categories: emulsion
+weight : 8
+---
+
+Πλαστικό χρώμα γενικής χρήσης κατάλληλο για συχνό βάψιμο εσωτερικών χώρων
