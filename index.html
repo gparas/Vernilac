@@ -44,22 +44,47 @@ title: Vernilac - Think Differently
 	</div>
 </div>
 
-<div class="home">
+<div class="block">
+	<div class="container">
+		<h3 class="block-title">Χρωματικές Εμπνεύσεις</h3>
+		<p class="block-subtitle">Βρείτε το χρώμα που σας εμπνέει</p>
 
-	<h1 class="page-heading">Posts</h1>
-
-	<ul class="post-list">
-		{% for post in site.posts %}
-			<li>
-				<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-				<h2>
-					<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-				</h2>
-			</li>
-		{% endfor %}
-	</ul>
-
-	<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+		<div class="row">
+			<div class="col-1-5">
+				<a href="primer.html">
+					<img src="img/cat-primer.jpg" class="img-responsive">
+				</a>
+				<h4 class="cat-title">Υποστρώματα – Αστάρια τοίχων</h4>
+				<p>Υποστρώματα & αστάρια τοίχων σε μεγάλη ποικιλία</p>
+			</div>
+			<div class="col-1-5">
+				<a href="emulsion.html">
+					<img src="img/cat-interior.jpg" class="img-responsive">
+				</a>
+				<h4 class="cat-title">Εσωτερικούς Χώρους</h4>
+				<p>Πλαστικά χρώματα για εσωτερικούς τοίχους, σε χιλιάδες αποχρώσεις.</p>
+			</div>
+			<div class="col-1-5">
+				<a href="acrylic.html">
+					<img src="img/cat-exterior.jpg" class="img-responsive">
+				</a>
+				<h4 class="cat-title">Εξωτερικούς Χώρους</h4>
+				<p>Ακρυλικά χρώματα για εξωτερικούς τοίχους, σε χιλιάδες αποχρώσεις.</p>
+			</div>
+			<div class="col-1-5">
+				<a href="wood.html">
+					<img src="img/cat-wood.jpg" class="img-responsive">
+				</a>
+				<h4 class="cat-title">Ξύλινες Επιφάνειες</h4>
+				<p>Μεγάλη γκάμα προϊόντων για βαφή ξύλινων επιφανειών</p>
+			</div>
+			<div class="col-1-5">
+				<a href="metal.html">
+					<img src="img/cat-metal.jpg" class="img-responsive">
+				</a>
+				<h4 class="cat-title">Μεταλλικές Επιφάνειες</h4>
+				<p>Μεγάλη γκάμα χρωμάτων για μεταλλικές επιφάνειες.</p>
+			</div>
+		</div>
+	</div>
 </div>

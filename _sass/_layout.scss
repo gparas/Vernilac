@@ -89,6 +89,10 @@ $bgc-teaser:	rgba(28, 149, 150, 0.8);
 	@include bg-block-featured;
 }
 
+.block-lg{
+	padding: 100px 0;
+}
+
 // Image backgrounds
 
 .bg-hero-home{
@@ -152,6 +156,10 @@ $bgc-teaser:	rgba(28, 149, 150, 0.8);
 	margin-top: $navbar-height;
 }
 
+.navbar-nav > li > a{
+	font-size: 15px;
+}
+
 // = Article
 // --------------------------------------------------------------
 
@@ -186,3 +194,17 @@ article{
 	}
 }
 
+// = Custom width
+// --------------------------------------------------------------
+
+.col-1-5 {
+	position: relative;
+	min-height: 1px;
+	padding-right: $grid-gutter-width / 2;
+	padding-left: $grid-gutter-width / 2;
+
+	@media (min-width: $grid-float-breakpoint){
+		width: 20%;
+		float: left;
+	}
+}
