@@ -5,7 +5,6 @@ $bgc-teaser:	rgba(28, 149, 150, 0.8);
 	background-color: $bgc-block;
 	background-size: cover;
 	color: #fff;
-	text-align: center;
 
 	h1, h2, h3{
 		color: inherit;
@@ -93,35 +92,39 @@ $bgc-teaser:	rgba(28, 149, 150, 0.8);
 // Image backgrounds
 
 .bg-hero-home{
-	background-image:url("/img/hero-home.jpg");
+	background-image:url("../img/hero-home.jpg");
 }
 
 .bg-hero-factory{
-	background-image:url("/img/hero-factory.jpg");
+	background-image:url("../img/hero-factory.jpg");
 }
 
 .bg-hero-emulsion{
-	background-image:url("/img/hero-emulsion.jpg");
+	background-image:url("../img/hero-emulsion.jpg");
 }
 
 .bg-hero-acrylic{
-	background-image:url("/img/hero-acrylic.jpg");
+	background-image:url("../img/hero-acrylic.jpg");
 }
 
 .bg-hero-primer{
-	background-image:url("/img/hero-primer.jpg");
+	background-image:url("../img/hero-primer.jpg");
 }
 
 .bg-hero-wood{
-	background-image:url("/img/hero-wood.jpg");
+	background-image:url("../img/hero-wood.jpg");
 }
 
 .bg-hero-metal{
-	background-image:url("/img/hero-metal.jpg");
+	background-image:url("../img/hero-metal.jpg");
+}
+
+.bg-hero-colors{
+	background-image:url("../img/hero-colors.jpg");
 }
 
 .bg-parallax{
-	background-image:url("/img/bg-parallax.jpg");
+	background-image:url("../img/bg-parallax.jpg");
 }
 
 
