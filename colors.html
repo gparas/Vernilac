@@ -12,61 +12,306 @@ title: Color Creations
 
 <div class="block">
 	<div class="container">
-	<div>
 
-	<!-- Nav tabs -->
-	<ul class="color-grid" role="tablist">
-		{% for color in site.colors %}
-		<li role="presentation" style="background-color: {{ color.rgb }};">
-			<a href="#{{ color.code }}" aria-controls="{{ color.code }}" role="tab" data-toggle="tab"><span class="sr-only">{{ color.title }}</span></a>
-		</li>
-		{% endfor %}
-	</ul>
+		<!-- Nav tabs -->
+		<ul class="color-grid" role="tablist">
+			{% for color in site.data.colors.creations limit: 18 %}
+			<li role="presentation" style="background-color: rgb({{ color.rgb }});">
+				<a href="#{{ color.code }}" aria-controls="{{ color.code }}" role="tab" data-toggle="tab"><span class="sr-only">{{ color.title }}</span></a>
+			</li>
+			{% endfor %}
+		</ul>
 
-	<!-- Tab panes -->
-	<div class="tab-content">
-		{% for color in site.colors %}
-			<div role="tabpanel" class="tab-pane color-description" id="{{ color.code }}" style="background-color: {{ color.rgb }};">
-				<button type="button" class="close" data-dismiss="tab-pane" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		<!-- Tab panes -->
+		<div class="tab-content">
+			{% for color in site.data.colors.creations limit: 18  %}
+			<div role="tabpanel" class="tab-pane color-description" id="{{ color.code }}" style="background-color: rgb({{ color.rgb }});">
+				<button type="button" class="close close-tab" data-dismiss="tab-pane" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 				<h3 class="color-title">{{ color.title }}</h3>
 				<p>{{ color.content }}</p>
 			</div>
-		{% endfor %}
-	</div>
+			{% endfor %}
+		</div>
 
-	</div>
+		<!-- Nav tabs -->
+		<ul class="color-grid" role="tablist">
+			{% for color in site.data.colors.creations limit: 18 offset: 18 %}
+			<li role="presentation" style="background-color: rgb({{ color.rgb }});">
+				<a href="#{{ color.code }}" aria-controls="{{ color.code }}" role="tab" data-toggle="tab"><span class="sr-only">{{ color.title }}</span></a>
+			</li>
+			{% endfor %}
+		</ul>
+
+		<!-- Tab panes -->
+		<div class="tab-content">
+			{% for color in site.data.colors.creations limit: 18 offset: 18 %}
+			<div role="tabpanel" class="tab-pane color-description" id="{{ color.code }}" style="background-color: rgb({{ color.rgb }});">
+				<button type="button" class="close close-tab" data-dismiss="tab-pane" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h3 class="color-title">{{ color.title }}</h3>
+				<p>{{ color.content }}</p>
+			</div>
+			{% endfor %}
+		</div>
+
+		<!-- Nav tabs -->
+		<ul class="color-grid" role="tablist">
+			{% for color in site.data.colors.creations limit: 18 offset: 36 %}
+			<li role="presentation" style="background-color: rgb({{ color.rgb }});">
+				<a href="#{{ color.code }}" aria-controls="{{ color.code }}" role="tab" data-toggle="tab"><span class="sr-only">{{ color.title }}</span></a>
+			</li>
+			{% endfor %}
+		</ul>
 		
-		<!-- <div id="accordion">
-			<ul class="color-grid">
-				{% for color in site.colors %}
-					<li style="background-color: {{ color.rgb }};">
-						<a role="button" data-toggle="collapse" href="#{{ color.code }}" aria-expanded="false" aria-controls="collapseExample"><span class="sr-only">{{ color.title }}</span></a>
-					</li>
-					<div class="collapse" id="{{ color.code }}">
-						<div class="color-description" style="background-color: {{ color.rgb }};">
-							<h3 class="color-title">{{ color.title }}</h3>
-							<p>{{ color.content }}</p>
-						</div>
-					</div>
-				{% endfor %}
+		<!-- Tab panes -->
+		<div class="tab-content">
+			{% for color in site.data.colors.creations limit: 18 offset: 36 %}
+			<div role="tabpanel" class="tab-pane color-description" id="{{ color.code }}" style="background-color: rgb({{ color.rgb }});">
+				<button type="button" class="close close-tab" data-dismiss="tab-pane" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h3 class="color-title">{{ color.title }}</h3>
+				<p>{{ color.content }}</p>
+			</div>
+			{% endfor %}
+		</div>
 
-				<ul class="color-grid">
-				{% for color in site.colors limit: 2 %}
-					<li style="background-color: {{ color.rgb }};">
-						<a href="{{ color.url }}"><span class="sr-only">{{ color.title }}</span></a>
-					</li>
-				{% endfor %}
-				</ul>
+		<!-- Nav tabs -->
+		<ul class="color-grid" role="tablist">
+			{% for color in site.data.colors.creations limit: 18 offset: 54 %}
+			<li role="presentation" style="background-color: rgb({{ color.rgb }});">
+				<a href="#{{ color.code }}" aria-controls="{{ color.code }}" role="tab" data-toggle="tab"><span class="sr-only">{{ color.title }}</span></a>
+			</li>
+			{% endfor %}
+		</ul>
+		
+		<!-- Tab panes -->
+		<div class="tab-content">
+			{% for color in site.data.colors.creations limit: 18 offset: 54 %}
+			<div role="tabpanel" class="tab-pane color-description" id="{{ color.code }}" style="background-color: rgb({{ color.rgb }});">
+				<button type="button" class="close close-tab" data-dismiss="tab-pane" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h3 class="color-title">{{ color.title }}</h3>
+				<p>{{ color.content }}</p>
+			</div>
+			{% endfor %}
+		</div>
 
-				<ul class="color-grid">
-				{% for color in site.colors limit: 2 offset: 2 %}
-					<li style="background-color: {{ color.rgb }};">
-						<a href="{{ color.url }}"><span class="sr-only">{{ color.title }}</span></a>
-					</li>
-				{% endfor %}
-				</ul>
+		<!-- Nav tabs -->
+		<ul class="color-grid" role="tablist">
+			{% for color in site.data.colors.creations limit: 18 offset: 72 %}
+			<li role="presentation" style="background-color: rgb({{ color.rgb }});">
+				<a href="#{{ color.code }}" aria-controls="{{ color.code }}" role="tab" data-toggle="tab"><span class="sr-only">{{ color.title }}</span></a>
+			</li>
+			{% endfor %}
+		</ul>
+		
+		<!-- Tab panes -->
+		<div class="tab-content">
+			{% for color in site.data.colors.creations limit: 18 offset: 72 %}
+			<div role="tabpanel" class="tab-pane color-description" id="{{ color.code }}" style="background-color: rgb({{ color.rgb }});">
+				<button type="button" class="close close-tab" data-dismiss="tab-pane" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h3 class="color-title">{{ color.title }}</h3>
+				<p>{{ color.content }}</p>
+			</div>
+			{% endfor %}
+		</div>
 
-			</ul>
-		</div> -->
+		<!-- Nav tabs -->
+		<ul class="color-grid" role="tablist">
+			{% for color in site.data.colors.creations limit: 18 offset: 90 %}
+			<li role="presentation" style="background-color: rgb({{ color.rgb }});">
+				<a href="#{{ color.code }}" aria-controls="{{ color.code }}" role="tab" data-toggle="tab"><span class="sr-only">{{ color.title }}</span></a>
+			</li>
+			{% endfor %}
+		</ul>
+		
+		<!-- Tab panes -->
+		<div class="tab-content">
+			{% for color in site.data.colors.creations limit: 18 offset: 90 %}
+			<div role="tabpanel" class="tab-pane color-description" id="{{ color.code }}" style="background-color: rgb({{ color.rgb }});">
+				<button type="button" class="close close-tab" data-dismiss="tab-pane" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h3 class="color-title">{{ color.title }}</h3>
+				<p>{{ color.content }}</p>
+			</div>
+			{% endfor %}
+		</div>
+
+		<!-- Nav tabs -->
+		<ul class="color-grid" role="tablist">
+			{% for color in site.data.colors.creations limit: 18 offset: 108 %}
+			<li role="presentation" style="background-color: rgb({{ color.rgb }});">
+				<a href="#{{ color.code }}" aria-controls="{{ color.code }}" role="tab" data-toggle="tab"><span class="sr-only">{{ color.title }}</span></a>
+			</li>
+			{% endfor %}
+		</ul>
+		
+		<!-- Tab panes -->
+		<div class="tab-content">
+			{% for color in site.data.colors.creations limit: 18 offset: 108 %}
+			<div role="tabpanel" class="tab-pane color-description" id="{{ color.code }}" style="background-color: rgb({{ color.rgb }});">
+				<button type="button" class="close close-tab" data-dismiss="tab-pane" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h3 class="color-title">{{ color.title }}</h3>
+				<p>{{ color.content }}</p>
+			</div>
+			{% endfor %}
+		</div>
+
+		<!-- Nav tabs -->
+		<ul class="color-grid" role="tablist">
+			{% for color in site.data.colors.creations limit: 18 offset: 126 %}
+			<li role="presentation" style="background-color: rgb({{ color.rgb }});">
+				<a href="#{{ color.code }}" aria-controls="{{ color.code }}" role="tab" data-toggle="tab"><span class="sr-only">{{ color.title }}</span></a>
+			</li>
+			{% endfor %}
+		</ul>
+		
+		<!-- Tab panes -->
+		<div class="tab-content">
+			{% for color in site.data.colors.creations limit: 18 offset: 126 %}
+			<div role="tabpanel" class="tab-pane color-description" id="{{ color.code }}" style="background-color: rgb({{ color.rgb }});">
+				<button type="button" class="close close-tab" data-dismiss="tab-pane" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h3 class="color-title">{{ color.title }}</h3>
+				<p>{{ color.content }}</p>
+			</div>
+			{% endfor %}
+		</div>
+
+		<!-- Nav tabs -->
+		<ul class="color-grid" role="tablist">
+			{% for color in site.data.colors.creations limit: 18 offset: 144 %}
+			<li role="presentation" style="background-color: rgb({{ color.rgb }});">
+				<a href="#{{ color.code }}" aria-controls="{{ color.code }}" role="tab" data-toggle="tab"><span class="sr-only">{{ color.title }}</span></a>
+			</li>
+			{% endfor %}
+		</ul>
+		
+		<!-- Tab panes -->
+		<div class="tab-content">
+			{% for color in site.data.colors.creations limit: 18 offset: 144 %}
+			<div role="tabpanel" class="tab-pane color-description" id="{{ color.code }}" style="background-color: rgb({{ color.rgb }});">
+				<button type="button" class="close close-tab" data-dismiss="tab-pane" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h3 class="color-title">{{ color.title }}</h3>
+				<p>{{ color.content }}</p>
+			</div>
+			{% endfor %}
+		</div>
+
+		<!-- Nav tabs -->
+		<ul class="color-grid" role="tablist">
+			{% for color in site.data.colors.creations limit: 18 offset: 162 %}
+			<li role="presentation" style="background-color: rgb({{ color.rgb }});">
+				<a href="#{{ color.code }}" aria-controls="{{ color.code }}" role="tab" data-toggle="tab"><span class="sr-only">{{ color.title }}</span></a>
+			</li>
+			{% endfor %}
+		</ul>
+		
+		<!-- Tab panes -->
+		<div class="tab-content">
+			{% for color in site.data.colors.creations limit: 18 offset: 162 %}
+			<div role="tabpanel" class="tab-pane color-description" id="{{ color.code }}" style="background-color: rgb({{ color.rgb }});">
+				<button type="button" class="close close-tab" data-dismiss="tab-pane" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h3 class="color-title">{{ color.title }}</h3>
+				<p>{{ color.content }}</p>
+			</div>
+			{% endfor %}
+		</div>
+
+		<!-- Nav tabs -->
+		<ul class="color-grid" role="tablist">
+			{% for color in site.data.colors.creations limit: 18 offset: 180 %}
+			<li role="presentation" style="background-color: rgb({{ color.rgb }});">
+				<a href="#{{ color.code }}" aria-controls="{{ color.code }}" role="tab" data-toggle="tab"><span class="sr-only">{{ color.title }}</span></a>
+			</li>
+			{% endfor %}
+		</ul>
+		
+		<!-- Tab panes -->
+		<div class="tab-content">
+			{% for color in site.data.colors.creations limit: 18 offset: 180 %}
+			<div role="tabpanel" class="tab-pane color-description" id="{{ color.code }}" style="background-color: rgb({{ color.rgb }});">
+				<button type="button" class="close close-tab" data-dismiss="tab-pane" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h3 class="color-title">{{ color.title }}</h3>
+				<p>{{ color.content }}</p>
+			</div>
+			{% endfor %}
+		</div>
+
+		<!-- Nav tabs -->
+		<ul class="color-grid" role="tablist">
+			{% for color in site.data.colors.creations limit: 18 offset: 198 %}
+			<li role="presentation" style="background-color: rgb({{ color.rgb }});">
+				<a href="#{{ color.code }}" aria-controls="{{ color.code }}" role="tab" data-toggle="tab"><span class="sr-only">{{ color.title }}</span></a>
+			</li>
+			{% endfor %}
+		</ul>
+		
+		<!-- Tab panes -->
+		<div class="tab-content">
+			{% for color in site.data.colors.creations limit: 18 offset: 198 %}
+			<div role="tabpanel" class="tab-pane color-description" id="{{ color.code }}" style="background-color: rgb({{ color.rgb }});">
+				<button type="button" class="close close-tab" data-dismiss="tab-pane" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h3 class="color-title">{{ color.title }}</h3>
+				<p>{{ color.content }}</p>
+			</div>
+			{% endfor %}
+		</div>
+
+		<!-- Nav tabs -->
+		<ul class="color-grid" role="tablist">
+			{% for color in site.data.colors.creations limit: 18 offset: 216 %}
+			<li role="presentation" style="background-color: rgb({{ color.rgb }});">
+				<a href="#{{ color.code }}" aria-controls="{{ color.code }}" role="tab" data-toggle="tab"><span class="sr-only">{{ color.title }}</span></a>
+			</li>
+			{% endfor %}
+		</ul>
+		
+		<!-- Tab panes -->
+		<div class="tab-content">
+			{% for color in site.data.colors.creations limit: 18 offset: 216 %}
+			<div role="tabpanel" class="tab-pane color-description" id="{{ color.code }}" style="background-color: rgb({{ color.rgb }});">
+				<button type="button" class="close close-tab" data-dismiss="tab-pane" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h3 class="color-title">{{ color.title }}</h3>
+				<p>{{ color.content }}</p>
+			</div>
+			{% endfor %}
+		</div>
+
+		<!-- Nav tabs -->
+		<ul class="color-grid" role="tablist">
+			{% for color in site.data.colors.creations limit: 18 offset: 234 %}
+			<li role="presentation" style="background-color: rgb({{ color.rgb }});">
+				<a href="#{{ color.code }}" aria-controls="{{ color.code }}" role="tab" data-toggle="tab"><span class="sr-only">{{ color.title }}</span></a>
+			</li>
+			{% endfor %}
+		</ul>
+		
+		<!-- Tab panes -->
+		<div class="tab-content">
+			{% for color in site.data.colors.creations limit: 18 offset: 234 %}
+			<div role="tabpanel" class="tab-pane color-description" id="{{ color.code }}" style="background-color: rgb({{ color.rgb }});">
+				<button type="button" class="close close-tab" data-dismiss="tab-pane" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h3 class="color-title">{{ color.title }}</h3>
+				<p>{{ color.content }}</p>
+			</div>
+			{% endfor %}
+		</div>
+
+		<!-- Nav tabs -->
+		<ul class="color-grid" role="tablist">
+			{% for color in site.data.colors.creations limit: 18 offset: 252 %}
+			<li role="presentation" style="background-color: rgb({{ color.rgb }});">
+				<a href="#{{ color.code }}" aria-controls="{{ color.code }}" role="tab" data-toggle="tab"><span class="sr-only">{{ color.title }}</span></a>
+			</li>
+			{% endfor %}
+		</ul>
+		
+		<!-- Tab panes -->
+		<div class="tab-content">
+			{% for color in site.data.colors.creations limit: 18 offset: 252 %}
+			<div role="tabpanel" class="tab-pane color-description" id="{{ color.code }}" style="background-color: rgb({{ color.rgb }});">
+				<button type="button" class="close close-tab" data-dismiss="tab-pane" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h3 class="color-title">{{ color.title }}</h3>
+				<p>{{ color.content }}</p>
+			</div>
+			{% endfor %}
+		</div>
+		
 	</div>
 </div>

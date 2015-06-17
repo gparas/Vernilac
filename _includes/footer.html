@@ -39,3 +39,10 @@
 
 <script src="{{ "/bower_components/jquery/dist/jquery.min.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js" | prepend: site.baseurl }}"></script>
+
+<script type="text/javascript">
+$('.close-tab').click(function(e){
+    e.preventDefault();
+    $(this).parents().removeClass('active');
+});
+</script>
