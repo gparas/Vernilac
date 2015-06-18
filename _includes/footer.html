@@ -42,17 +42,25 @@
 
 <script type="text/javascript">
 
-	$('.close-tab').click(function(e){
+	$("body").on("click", '.close-tab', function(e) {
 		e.preventDefault();
-		$(this).parents().removeClass('active');
+		console.log(e);
+		$(this).parent().remove();
+		return false;
 	});
 
-	$('.color-grid > li > a').click(function (){
+	$('.color-grid > li > a').click(function () {
+		var $this= $(this),
+			$colorGrid = $this.closest(".color-grid"),
+			id = $this.attr("href"),  // #A1
+			$color = $(id).clone(),
+			$siblings = $colorGrid.siblings();
 
-		if($('.color-description').hasClass('active')){
-			$('.color-description').removeClass('active');
-		}
+		$siblings.filter(".color-description").remove();
+		$color.insertAfter($colorGrid);
 	});
+
+	
 
 	$.fn.contrastColor = function() {
 		return this.each(function() {
