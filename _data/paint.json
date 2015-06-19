@@ -1,0 +1,48 @@
+{
+   "acrylic":[
+      {
+         "title":"Acrylic Paint",
+         "thumbnail": "acrylic-1.jpg",
+         "description": "100% ακρυλικό χρώμα υψηλής ποιότητας."
+      },
+      {
+         "title":"Acrylic Paint",
+         "subtitle": "elastic",
+         "thumbnail": "acrylic-2.jpg",
+         "description": "Ελαστικό - Ενεργειακό χρώμα στεγανοποίησης, υγρομόνωσης και αδιαβροχοποίησης τοίχων και προσόψεων."
+      },
+      {
+         "title":"Acrylic Paint",
+         "subtitle": "thermoelastic",
+         "thumbnail": "acrylic-3.jpg",
+         "description": "Θερμοκεραμικό - Ενεργειακό χρώμα υγρομόνωσης, θερμομόνωσης και αφύγρανσης τοίχων & προσόψεων."
+      },
+      {
+         "title":"Acrylic Matt",
+         "thumbnail": "acrylic-4.jpg",
+         "description": "Αδιάβροχο 100% ακρυλικό χρώμα υψηλής καλυπτικότητας."
+      },
+      {
+         "title":"Βetacryl",
+         "thumbnail": "acrylic-5.jpg",
+         "description": "Ακρυλικό τσιμεντόχρωμα υψηλών προδιαγραφών, με εξαιρετικές αντοχές στα αλκάλια."
+      },
+      {
+         "title":"Durocryl",
+         "subtitle": "fiber flex",
+         "thumbnail": "acrylic-6.jpg",
+         "description": "Ινοπλισμένο ελαστομερές χρώμα & μονωτικό τοίχων."
+      },
+      {
+         "title":"Durocryl",
+         "thumbnail": "acrylic-7.jpg",
+         "description": "100% Ακρυλικό επαγγελματικό χρώμα εξωτερικής χρήσης."
+      },
+      {
+         "title":"Decocryl",
+         "thumbnail": "acrylic-8.jpg",
+         "description": "Ακρυλικό χρώμα γενικής χρήσης κατάλληλο για συχνό βάψιμο εξωτερικών όψεων."
+      }
+   ]
+}
+
