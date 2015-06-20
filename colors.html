@@ -10,6 +10,7 @@ title: Color Creations
 	</div>
 </div>
 
+{% assign products = color.products | replace: ',', ' ' %}
 
 <div class="block block-lg">
 	<div class="container">
@@ -22,8 +23,10 @@ title: Color Creations
 		<ul class="color-grid" role="tablist">
 			{% endif %}
 
-			<li role="presentation" style="background-color: rgb({{ color.rgb }});">
-				<a href="#{{ color.code }}" aria-controls="{{ color.code }}" role="tab" data-toggle="tab"><span class="sr-only">{{ color.title }}</span></a>
+			<li role="presentation">
+				<a class="color-trigger" href="#{{ color.code }}" aria-controls="{{ color.code }}" role="tab" data-toggle="tab" style="background-color: rgb({{ color.rgb }});">
+					<span class="sr-only">{{ color.code }}</span>
+				</a>
 			</li>
 
 			{% if modulo == '17' or forloop.last %}
@@ -36,8 +39,10 @@ title: Color Creations
 			{% for color in site.data.colors.creations  %}
 			<div role="tabpanel" class="tab-pane color-description" id="{{ color.code }}" style="background-color: rgb({{ color.rgb }});">
 				<button type="button" class="close close-tab" data-dismiss="tab-pane" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h3 class="color-title">{{ color.title }}</h3>
-				<p>{{ color.content }}</p>
+				<h3>{{ color.title-GR }}</h3>
+				<h3 class="mg-lg">{{ color.code }}</h3>
+				<p class="sub-title">Κωδικοί προϊόντων:</p>
+				<p class="relevant-products">{{ color.products | replace: ',', ' <br>' }}</p>
 			</div>
 			{% endfor %}
 		</div>
