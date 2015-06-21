@@ -1,7 +1,8 @@
 $header-brand-bg: #231F20;
+$header-height: 500px;
 
 .site-header{
-	height: 500px;
+	min-height: $header-height;
 	position: relative;
 	background-size: cover;
 
@@ -17,7 +18,10 @@ $header-brand-bg: #231F20;
 }
 
 .header-brand {
+	position: relative;
 	border-bottom: 4px solid $header-brand-bg;
+	z-index: 100;
+
 
 	> a{
 		padding: 20px;

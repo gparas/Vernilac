@@ -3,7 +3,6 @@
 
 .products{
 	margin-bottom: 80px;
-	min-height: 150px;
 
 	.product-subtitle{
 		font-size: 12px;
@@ -18,7 +17,7 @@
 }
 
 .text-emulsion, .text-primer{
-	color: $state-info-text;
+	color: #4D9DC8;
 }
 
 .text-acrylic{
@@ -110,8 +109,12 @@ $color-grid-mg: 4px;
 }
 
 
-// = Home Categories
+// = Home
 // --------------------------------------------------------------
+
+#home-carousel{
+	margin-top: -$header-height;
+}
 
 .cat-title{
 	font-size: 15px;

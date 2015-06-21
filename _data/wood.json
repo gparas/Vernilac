@@ -1,0 +1,26 @@
+{
+   "enamel":[
+      {
+         "title":"Eptalux",
+         "category": "enamel",
+         "thumbnail": "enamel-1.jpg",
+         "description": "Κορυφαίας ποιότητας ριπολίνη για ξύλα.Συνδυάζει εξαιρετική καλυπτικότητα, τέλειο φινίρισμα, εύκολο δούλεμα και υψηλή αντοχή στο κιτρίνισμα"
+      },
+      {
+         "title":"Gloss finish",
+         "category": "enamel",
+         "thumbnail": "enamel-2.jpg",
+         "description": "Γυαλιστερό βερνικόχρωμα για μέταλλα και ξύλα"
+      }
+   ],
+
+   "primer":[
+      {
+         "title":"Velatura primer",
+         "category": "primer-wood",
+         "thumbnail": "primer-wood.jpg",
+         "description": "Αστάρι διαλύτου για βερνικοχρώματα"
+      }
+   ]
+}
+

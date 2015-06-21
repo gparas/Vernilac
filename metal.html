@@ -10,20 +10,16 @@ lead: Μεγάλη γκάμα χρωμάτων για μεταλλικές επ�
 <div class="block">
 	<div class="container">
 		
-		{% assign products = site.categories.metal | sort: 'weight' %}
-		
-		<h3 class="block-title">Βερνικοχρώματα</h3>
-		<div class="block-subtitle">Κορυφαίας ποιότητας</div>
+		{% assign products = site.data.metal.enamel %}
+
+		<h2 class="text-success block-heading">Βερνικοχρώματα <small>Κορυφαίας ποιότητας</small></h2>
 		
 		{% include product-list.html %}
 
-		<hr class="separator">
-		
-		{% assign products = site.categories.primer-metal | sort: 'weight' %}
+		{% assign products = site.data.metal.primer %}
 
-		<h3 class="block-title">Αστάρια βερνικοχρωμάτων</h3>
-		<div class="block-subtitle">Κορυφαίας ποιότητας</div>
-		
+		<h2 class="text-danger block-heading">Αστάρια βερνικοχρωμάτων <small>Κορυφαίας ποιότητας</small></h2>
+
 		{% include product-list.html %}
 
 	</div>

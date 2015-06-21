@@ -1,21 +1,28 @@
-<div class="row">
-	{% for post in products %}
-	{% assign subtitle = post.subtitle %}
-	<div class="col-sm-6 products">
-		<div class="row">
-			<div class="col-sm-4">
-				<img src="img/{{ post.thumbnail }}" class="img-responsive" alt="{{ post.title }} {% if subtitle %}{{ subtitle }}{% endif %}">
-			</div>	
-			<div class="col-sm-8">
-				<h3 class="product-title">{{ post.title }}</h3>
+{% for paint in products %}
 
-				{% if subtitle %}
-				<p class="product-subtitle text-{{ post.categories }}">{{ subtitle }}</p>
-				{% endif %}
+{% capture modulo %}{{ forloop.index0 | mod:2 }}{% endcapture %}
 
-				<p>{{ post.content }}</p>
-			</div>	
+	{% if modulo == '0' or forloop.first %}
+	<div class="row">
+	{% endif %}
+
+		<div class="col-sm-6 products">
+			<div class="row">
+				<div class="col-sm-4">
+					<img src="img/{{ paint.thumbnail }}" class="img-responsive" alt="{{ paint.title }} {% if subtitle %}{{ subtitle }}{% endif %}">
+				</div>	
+				<div class="col-sm-8">
+					<h3 class="product-title">{{ paint.title }}</h3>
+
+					<p class="product-subtitle text-{{ paint.category }}">{{ paint.subtitle }}</p>
+
+					<p>{{ paint.description }}</p>
+				</div>	
+			</div>
 		</div>
-	</div>	
-	{% endfor %}
-</div>
+	
+	{% if modulo == '1' or forloop.last %}
+	</div>
+	{% endif %}
+
+{% endfor %}
