@@ -2,8 +2,11 @@
 layout: default
 title: Primer
 header: Υποστρώματα – Αστάρια τοίχων
-sub-header: Κορυφαίας ποιότητας
+lead: Κορυφαίας ποιότητας
 ---
+
+{% include sub-header.html %}
+
 
 {% assign products = site.categories.primer | sort: 'weight' %}
 

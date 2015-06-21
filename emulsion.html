@@ -2,8 +2,11 @@
 layout: default
 title: Emulsion
 header: Πλαστικά χρώματα
-sub-header: Πλαστικά χρώματα κορυφαίας ποιότητας
+lead: Πλαστικά χρώματα κορυφαίας ποιότητας
 ---
+
+{% include sub-header.html %}
+
 
 {% assign products = site.categories.emulsion | sort: 'weight' %}
 

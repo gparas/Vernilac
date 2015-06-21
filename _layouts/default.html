@@ -3,13 +3,17 @@
 
 {% include head.html %}
 
-<body class="{% if page.title == 'Color Creations' %} {{page.title | downcase  | replace: ' ', '-'}} {% endif %}">
+<body class="{% if page.title == 'Color Creations' %}{{page.title | downcase  | replace: ' ', '-'}}{% endif %}">
 
+	
 	{% include header.html %}
 
 	{{ content }}
 
+
 	{% include footer.html %}
+
+
 
 </body>
 

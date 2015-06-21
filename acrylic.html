@@ -2,8 +2,10 @@
 layout: default
 title: Acrylic
 header: Ακρυλικά χρώματα
-sub-header: Ακρυλικά χρώματα κορυφαίας ποιότητας
+lead: Ακρυλικά χρώματα κορυφαίας ποιότητας
 ---
+
+{% include sub-header.html %}
 
 
 {% assign products = site.categories.acrylic | sort: 'weight' %}
