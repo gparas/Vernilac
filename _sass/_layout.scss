@@ -1,5 +1,5 @@
 $bgc-block:	#47454B;
-$bgc-teaser:	rgba(28, 149, 150, 0.8);
+
 
 @mixin bg-block-featured (){
 	background-color: $bgc-block;
@@ -36,23 +36,6 @@ $bgc-teaser:	rgba(28, 149, 150, 0.8);
 	}
 }
 
-
-.teaser{
-	background-color: $bgc-teaser;
-	width: 80%;
-	margin: 0 auto;
-	padding: 1px;
-	color: #fff;
-	text-align: center;
-
-	@media (min-width: $screen-md-min){
-		width: 50%;
-	}
-
-	h1, h2, h3{
-		color: inherit;
-	}
-}
 
 // = Block Styling
 // --------------------------------------------------------------

@@ -21,6 +21,10 @@ body {
 // = Text
 // --------------------------------------------------------------
 
+$text-supplementary-color:	#6E2089;
+$text-zen-color: 			#A27B54;
+
+
 .title-lg {
   font-size: 60px;
   color: rgb(255, 255, 255);
@@ -33,5 +37,13 @@ body {
 }
 
 .text-supplementary{
-	color: #6E2089;
+	color: $text-supplementary-color;
+}
+
+.text-zen{
+	color: $text-zen-color;
+
+	small{
+		color: darken($text-zen-color, 25%);
+	}
 }
