@@ -11,6 +11,9 @@ github_username:  jekyll
 # Build settings
 markdown: kramdown
 
+sass:
+  sass_dir:          _bower_components/uikit/scss
+  style:            :compressed
 
 collections:
   - colors
