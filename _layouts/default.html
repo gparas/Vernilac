@@ -4,7 +4,6 @@
 {% include head.html %}
 
 <body class="{% if page.title == 'Color Creations' %}{{page.title | downcase  | replace: ' ', '-'}}{% endif %}">
-
 	
 	{% include header.html %}
 	{% comment %}
@@ -14,6 +13,9 @@
 		{% include footer.html %}
 	{% endcomment %}
 
+	{% include home-slideshow.html %}
+
+	{% include javascripts.html %}
 
 </body>
 

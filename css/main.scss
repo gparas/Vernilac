@@ -11,7 +11,7 @@ $navbar-nav-height:    50px;
 
 
 //
-// Uikit
+// Core
 // --------------------------------------------------
 
 // Abstract
@@ -29,6 +29,9 @@ $navbar-nav-height:    50px;
 @import "core/navbar";
 @import "core/subnav";
 
+// Common
+@import "core/animation.scss";
+
 // JavaScript
 @import "core/dropdown";
 
@@ -36,6 +39,13 @@ $navbar-nav-height:    50px;
 @import "core/text";
 @import "core/utility";
 @import "core/flex";
+
+//
+// Components
+// --------------------------------------------------
+
+@import "components/slidenav";
+@import "components/slideshow";
 
 
 // 
