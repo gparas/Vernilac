@@ -10,7 +10,8 @@ $base-body-color:            #666;
 $base-heading-color:         #333;
 $base-heading-font-weight:   500;
 
-$navbar-nav-height:          50px;
+$navbar-nav-height:          55px;
+$navbar-nav-font-size:       16px;
 
 $block-muted-background:     #f2f2f2;
 
@@ -65,11 +66,21 @@ $slidenav-next-icon:         '›';
 // --------------------------------------------------
 
 .tm-header-logo{
-	padding: 30px 20px 40px;
+	padding: 30px 25px 45px;
 	background: $block-secondary-background;
 }
 
-.tm-toolbar{ height: 40px; }
+.tm-toolbar{ 
+	height: 40px;
+
+	a{
+		color: #fff;
+		&:hover,
+		&:focus {
+			color: darken(#fff, 10%);
+		}
+	}
+}
 
 .tm-home{
 	position: relative;
