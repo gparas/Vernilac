@@ -9,6 +9,11 @@
 
 $navbar-nav-height:    50px;
 
+$utility-container-large-max-width:    980px;
+
+$slidenav-previous-icon:    '‹';
+$slidenav-next-icon:        '›';
+
 
 //
 // Core
@@ -30,7 +35,8 @@ $navbar-nav-height:    50px;
 @import "core/subnav";
 
 // Common
-@import "core/animation.scss";
+@import "core/animation";
+@import "core/overlay";
 
 // JavaScript
 @import "core/dropdown";
@@ -62,4 +68,11 @@ $navbar-nav-height:    50px;
 .tm-home{
 	position: relative;
 	margin-top: -130px;
+}
+
+.uk-slidenav-next,
+.uk-slidenav-previous{
+	&:before{
+		font-family: "Lucida Console", Monaco, monospace;
+	}
 }
