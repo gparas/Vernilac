@@ -6,14 +6,20 @@
 <body class="{% if page.title == 'Color Creations' %}{{page.title | downcase  | replace: ' ', '-'}}{% endif %}">
 	
 	{% include header.html %}
-	{% comment %}
+	
+	{% if page.title == 'Home' %}
+		{% include home-slideshow.html %}
+	{% endif %}
+	
+	<div class="uk-container uk-container-center">
 		{{ content }}
+	</div>
 
 
+	{% comment %}
 		{% include footer.html %}
 	{% endcomment %}
 
-	{% include home-slideshow.html %}
 
 	{% include javascripts.html %}
 

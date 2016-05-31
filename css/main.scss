@@ -57,10 +57,9 @@ $navbar-nav-height:    50px;
 	background: $block-secondary-background;
 }
 
-.tm-toolbar{
-	height: 40px;
+.tm-toolbar{ height: 40px; }
 
-	.uk-subnav{
-		margin: 0;
-	}
+.tm-home{
+	position: relative;
+	margin-top: -130px;
 }
