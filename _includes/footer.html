@@ -1,118 +1,50 @@
-<footer class="block site-footer">
-	<div class="container">
-		<div class="mg-lg">
-			<img class="brand-logo" src="img/logo.svg">
-		</div>
-		<div class="row">
-			<div class="col-sm-8">
-				<div class="row">
-					<div class="col-sm-6">
-						<h5 class="site-footer-title invisible">Επικοινωνία</h5>
-						<p>
-							27 χλμ. Π.Ε.Ο. Αθηνών – Θηβών,<br>
-							196 00 Μάνδρα, Αττικής<br><br>
-							<strong>Τηλ</strong>.: 210 55 56 691-2, 210 55 56 696-7<br>
-							<strong>Fax</strong>: 210 55 56 610<br>
-							<strong>e-mail</strong>: sales@vernilac.gr
-						</p>
+<footer class="uk-block uk-block-muted">
+	<div class="uk-container uk-container-center">
+		<div class="uk-grid">
+			<div class="uk-width-1-3">
+				<div class="uk-grid">
+					<div class="uk-width-1-2">
+						<h4>Quick Links</h4>
+						<ul class="uk-list uk-link-muted">
+							{% for item in site.data.main-menu %}
+								<li><a href="{{ item.url }}">{{ item.text }}</a></li>
+							{% endfor %}
+						</ul>
 					</div>
-					<div class="col-sm-6">
-						<h5 class="site-footer-title">Υποκ. Θεσσαλονίκης</h5>
-						<p>
-							ΚΩΝΣΤΑΝΤΙΝΟΥΠΟΛΕΩΣ 12,<br> 
-							ΑΓΡ. ΠΕΡΙΟΧΗ ΔΙΑΒΑΤΩΝ,<br>
-							ΘΕΣ/ΝΙΚΗ 546 28, Τ.Θ. 1538<br><br>
-							<strong>Τηλ.</strong>: 2310 789840-41, 2310 789831,<br>
-							<strong>Fax</strong>: 2310 789849
-						</p>
+					<div class="uk-width-1-2">
+						<h4>About us</h4>
+						<ul class="uk-list uk-link-muted">
+							{% for item in site.data.main-menu %}
+								<li><a href="{{ item.url }}">{{ item.text }}</a></li>
+							{% endfor %}
+						</ul>
 					</div>
 				</div>
 			</div>
-			<div class="col-sm-4">
-				<div class="row">
-					<div class="col-sm-6">
-						<h5 class="site-footer-title text-warning">Εταιρεία</h5>
-						<ul class="nav">
-							<li><a href="about-us.html">Ποιοι είμαστε</a></li>
-							<li><a href="#">Terms of use</a></li>
-							<li><a href="#">Privacy</a></li>
-						</ul>
+			<div class="uk-width-2-3">
+				<div class="uk-grid">
+					<div class="uk-width-1-2">
+						<h4>Athens Store Locator</h4>
+						<address>
+							27 χλμ. Π.Ε.Ο. Αθηνών – Θηβών,<br/>
+							196 00 Μάνδρα, Αττικής<br/><br/>
+							Τηλ.: 210 55 56 691-2, 210 55 56 696-7<br/>
+							Fax: 210 55 56 610<br/>
+							e-mail: sales@vernilac.gr
+						</address>
 					</div>
-					<div class="col-sm-6">
-						<h5 class="site-footer-title text-warning">Quick Links</h5>
-						<ul class="nav">
-							<li><a href="/">Αρχική</a></li>
-							<li>
-								<a role="button" data-toggle="collapse" href="#product-menu-dropdown" aria-expanded="false" aria-controls="product-menu-dropdown">Προϊόντα</a>
-								<ul class="nav-dropdown collapse" id="product-menu-dropdown">
-									<li><a href="emulsion.html">Εσωτερικούς Χώρους</a></li>
-									<li><a href="acrylic.html">Εξωτερικούς Χώρους</a></li>
-									<li><a href="primer.html">Υποστρώματα – Αστάρια τοίχων</a></li>
-									<li><a href="wood.html">Ξύλινες Επιφάνειες</a></li>
-									<li><a href="metal.html">Μεταλλικές Επιφάνειες</a></li>
-								</ul>
-							</li>
-							<li><a href="colors.html">Χρώματα</a></li>
-						</ul>
+					<div class="uk-width-1-2">
+						<h4>Thessaloniki Store Locator</h4>
+						<address>
+							ΚΩΝΣΤΑΝΤΙΝΟΥΠΟΛΕΩΣ 12,<br/>
+							ΑΓΡ. ΠΕΡΙΟΧΗ ΔΙΑΒΑΤΩΝ,<br/>
+							ΘΕΣ/ΝΙΚΗ 546 28, Τ.Θ. 1538<br/><br/>
+							Τηλ.: 2310 789840-41, 2310 789831,<br/>
+							Fax: 2310 789849
+						</address>
 					</div>
-				</div>	
+				</div>
 			</div>
 		</div>
 	</div>
 </footer>
-
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-
-<script src="{{ "./bower_components/jquery/dist/jquery.min.js" | prepend: site.baseurl }}"></script>
-<script src="{{ "./bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js" | prepend: site.baseurl }}"></script>
-
-<script type="text/javascript">
-
-	$("body").on("click", '.close-tab', function(e) {
-		e.preventDefault();
-		console.log(e);
-		$(this).parent().remove();
-		return false;
-	});
-
-	$('.color-grid > li > a').click(function () {
-		var $this= $(this),
-			$colorGrid = $this.closest(".color-grid"),
-			id = $this.attr("href"),  // #A1
-			$color = $(id).clone(),
-			$siblings = $colorGrid.siblings();
-
-		$siblings.filter(".color-description").remove();
-		$color.insertAfter($colorGrid);
-	});
-
-	
-
-	$.fn.contrastColor = function() {
-		return this.each(function() {
-			var bg = $(this).css('background-color');
-	//use first opaque parent bg if element is transparent
-	if(bg == 'transparent' || bg == 'rgba(0, 0, 0, 0)') { 
-		$(this).parents().each(function(){
-			bg = $(this).css('background-color')
-			if(bg != 'transparent' && bg != 'rgba(0, 0, 0, 0)') return false; 
-		});
-		//exit if all parents are transparent
-		if(bg == 'transparent' || bg == 'rgba(0, 0, 0, 0)') return false;
-	}
-	//get r,g,b and decide
-	var rgb = bg.replace(/^(rgb|rgba)\(/,'').replace(/\)$/,'').replace(/\s/g,'').split(',');
-	var yiq = ((rgb[0]*299)+(rgb[1]*587)+(rgb[2]*114))/1000;
-	if(yiq >= 128) $(this).removeClass('light-color');
-	else $(this).addClass('light-color');
-});
-	};
-
-	$('.color-description').contrastColor();
-	$('.color-trigger').contrastColor();
-
-</script>
-
-

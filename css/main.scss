@@ -6,13 +6,16 @@
 // 
 // Custom Variables
 // --------------------------------------------------
+$base-body-color:            #666;
+$base-heading-color:         #333;
+$base-heading-font-weight:   500;
 
-$navbar-nav-height:    50px;
+$navbar-nav-height:          50px;
 
-$utility-container-large-max-width:    980px;
+$block-muted-background:     #f2f2f2;
 
-$slidenav-previous-icon:    '‹';
-$slidenav-next-icon:        '›';
+$slidenav-previous-icon:     '‹';
+$slidenav-next-icon:         '›';
 
 
 //
@@ -33,6 +36,9 @@ $slidenav-next-icon:        '›';
 // Navs
 @import "core/navbar";
 @import "core/subnav";
+
+// Elements
+@import "core/list";
 
 // Common
 @import "core/animation";
@@ -68,6 +74,18 @@ $slidenav-next-icon:        '›';
 .tm-home{
 	position: relative;
 	margin-top: -130px;
+}
+
+.tm-slider{
+	&:after{
+		content: '';
+		display: block;
+		width: 100%;
+		height: 250px;
+		position: absolute;
+		bottom: 0;
+		background: linear-gradient(rgba(0, 0, 0, 0), #FFF);
+	}
 }
 
 .uk-slidenav-next,
