@@ -80,10 +80,11 @@ $slidenav-next-icon:         '›';
   height: 360px;
 }
 
-$pages: ( colors, about_us );
+
+$pages: ( colors, about-us );
 
 @each $page in $pages {
-  .url_#{$page} {
+  .hero-#{$page} {
     background-image:url("/img/hero-#{$page}.jpg");
     @if $page == "colors" {
       background-position: 50% 8%;

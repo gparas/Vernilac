@@ -1,4 +1,4 @@
-<header {% if page.title != 'Home' %}class="tm-site-header {% body_class %}"{% endif %}>
+<header {% if page.title != 'Home' %}class="tm-site-header hero-{{page.title | downcase  | replace: ' ', '-'}}"{% endif %}>
 	<div class="uk-position-top uk-position-z-index">
 		<div class="uk-container uk-container-center">
 			<div class="uk-flex uk-flex-bottom">
