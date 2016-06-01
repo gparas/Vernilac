@@ -1,25 +1,27 @@
-<div class="uk-position-top uk-position-z-index">
-	<div class="uk-container uk-container-center">
-		<div class="uk-flex uk-flex-bottom">
-			<a class="tm-header-logo" href="{{ site.github.url }}/"><img src="img/logo.svg" width="240"></a>
-			<div class="uk-width-3-4">
-				<div class="tm-toolbar">
-					<ul class="uk-subnav uk-subnav-line uk-margin-remove">
-						{% for page in site.data.secondary-menu  %}
-							{% if page.text != "Πολιτική απορρήτου" and page.text != "Όροι και προϋποθέσεις" %}
+<header {% if page.title != 'Home' %}class="tm-site-header {% body_class %}"{% endif %}>
+	<div class="uk-position-top uk-position-z-index">
+		<div class="uk-container uk-container-center">
+			<div class="uk-flex uk-flex-bottom">
+				<a class="tm-header-logo" href="{{ site.github.url }}/"><img src="img/logo.svg" width="240"></a>
+				<div class="uk-width-3-4">
+					<div class="tm-toolbar">
+						<ul class="uk-subnav uk-subnav-line uk-margin-remove">
+							{% for page in site.data.secondary-menu  %}
+								{% if page.text != "Πολιτική απορρήτου" and page.text != "Όροι και προϋποθέσεις" %}
+									<li><a href="{{ page.url | prepend: site.github.url }}">{{ page.text }}</a></li>
+								{% endif %}
+							{% endfor %}
+						</ul>
+					</div>
+					<nav class="uk-navbar">
+						<ul class="uk-navbar-nav">
+							{% for page in site.data.main-menu %}
 								<li><a href="{{ page.url | prepend: site.github.url }}">{{ page.text }}</a></li>
-							{% endif %}
-						{% endfor %}
-					</ul>
+							{% endfor %}
+						</ul>
+					</nav>
 				</div>
-				<nav class="uk-navbar">
-					<ul class="uk-navbar-nav">
-						{% for page in site.data.main-menu %}
-							<li><a href="{{ page.url | prepend: site.github.url }}">{{ page.text }}</a></li>
-						{% endfor %}
-					</ul>
-				</nav>
 			</div>
 		</div>
 	</div>
-</div>
+</header>

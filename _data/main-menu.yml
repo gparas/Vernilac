@@ -1,7 +1,7 @@
 # Source https://bitbucket.org/christianspecht/code-examples/src/2205198ffa5d99cbc40773a80366869450678f4c/jekyll-dynamic-menu/src/_data/menu.yml?at=default&fileviewer=file-view-default
 # Important: all URLs must have a trailing slash!
 - text: Χρώματα
-  url: /
+  url: /colors.html
 - text: Έμπνευση
   url: /
 - text: Προϊόντα
