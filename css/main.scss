@@ -85,7 +85,7 @@ $pages: ( colors, about-us );
 
 @each $page in $pages {
   .hero-#{$page} {
-    background-image:url("/img/hero-#{$page}.jpg");
+    background-image:url("../img/hero-#{$page}.jpg");
     @if $page == "colors" {
       background-position: 50% 8%;
     }
