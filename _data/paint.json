@@ -131,12 +131,14 @@
       {
          "title":"Veradur classic",
          "category": "primer",
+         "subtitle": " ",
          "thumbnail": "primer-4.jpg",
          "description": "Άοσμο αστάρι νερού ακρυλικής βάσεως"
       },
       {
          "title":"Spatocryl",
          "category": "primer",
+         "subtitle": " ",
          "thumbnail": "primer-5.jpg",
          "description": "Ακρυλικός οικοδομικός στόκος"
       },
@@ -150,12 +152,14 @@
       {
          "title":"Durocoat",
          "category": "primer",
+         "subtitle": " ",
          "thumbnail": "primer-7.jpg",
          "description": "Αδιάβροχο ακρυλικό υπόστρωμα διαλύτου"
       },
       {
          "title":"Fungicide cleaner",
          "category": "primer",
+         "subtitle": " ",
          "thumbnail": "primer-8.jpg",
          "description": "Ειδικό καθαριστικό κατά της μούχλας"
       }

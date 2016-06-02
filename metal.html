@@ -1,26 +1,19 @@
 ---
-layout: default
+layout: page
 title: Metal
 header: Μεταλλικές Επιφάνειες
 lead: Μεγάλη γκάμα χρωμάτων για μεταλλικές επιφάνειες.
 ---
 
-{% include sub-header.html %}
-
-<div class="block">
-	<div class="container">
 		
-		{% assign products = site.data.metal.enamel %}
+{% assign products = site.data.metal.enamel %}
 
-		<h2 class="text-success block-heading">Βερνικοχρώματα <small>Κορυφαίας ποιότητας</small></h2>
-		
-		{% include product-list.html %}
+<h2 class="text-success block-heading">Βερνικοχρώματα <small>Κορυφαίας ποιότητας</small></h2>
 
-		{% assign products = site.data.metal.primer %}
+{% include product-list.html %}
 
-		<h2 class="text-danger block-heading">Αστάρια βερνικοχρωμάτων <small>Κορυφαίας ποιότητας</small></h2>
+{% assign products = site.data.metal.primer %}
 
-		{% include product-list.html %}
+<h2 class="text-danger block-heading">Αστάρια βερνικοχρωμάτων <small>Κορυφαίας ποιότητας</small></h2>
 
-	</div>
-</div>
+{% include product-list.html %}
