@@ -76,11 +76,11 @@ $slidenav-next-icon:         '›';
   background-repeat: no-repeat;
   height: 360px;
   position: relative;
+}
 
-  .tm-header-logo{
-    padding: 30px 25px 45px;
-    background: $block-secondary-background;
-  }
+.tm-header-logo{
+  padding: 30px 25px 45px;
+  background: $block-secondary-background;
 }
 
 .tm-site-header-mobile{
