@@ -1,0 +1,14 @@
+---
+layout: default
+title: Paints
+overlay: true
+---
+
+{% assign products = site.data.paint.emulsion %}
+{% include product-list.html %}
+
+{% assign products = site.data.paint.acrylic %}
+{% include product-list.html %}
+
+{% assign products = site.data.paint.primer %}
+{% include product-list.html %}

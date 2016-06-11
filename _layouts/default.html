@@ -6,6 +6,7 @@
 <body>
 	
 	{% include header.html %}
+	{% include header-mobile.html %}
 	
 	{% if page.title == 'Home' %}
 		{% include home-slideshow.html %}
@@ -15,6 +16,7 @@
 	{{ content }}
 
 	{% include footer.html %}
+	{% include footer-mobile.html %}
 
 	{% include javascripts.html %}
 

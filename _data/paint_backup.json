@@ -1,0 +1,179 @@
+{
+   "acrylic":[
+      {
+         "title":"Acrylic Paint",
+         "category": "acrylic",
+         "subtitle": null,
+         "thumbnail": "acrylic-1.jpg",
+         "description": "100% ακρυλικό χρώμα υψηλής ποιότητας."
+      },
+      {
+         "title":"Acrylic Paint",
+         "category": "acrylic",
+         "subtitle": "elastic",
+         "thumbnail": "acrylic-2.jpg",
+         "description": "Ελαστικό - Ενεργειακό χρώμα στεγανοποίησης, υγρομόνωσης και αδιαβροχοποίησης τοίχων και προσόψεων."
+      },
+      {
+         "title":"Acrylic Paint",
+         "category": "acrylic",
+         "subtitle": "thermoelastic",
+         "thumbnail": "acrylic-3.jpg",
+         "description": "Θερμοκεραμικό - Ενεργειακό χρώμα υγρομόνωσης, θερμομόνωσης και αφύγρανσης τοίχων & προσόψεων."
+      },
+      {
+         "title":"Acrylic Matt",
+         "category": "acrylic",
+         "subtitle": null,
+         "thumbnail": "acrylic-4.jpg",
+         "description": "Αδιάβροχο 100% ακρυλικό χρώμα υψηλής καλυπτικότητας."
+      },
+      {
+         "title":"Βetacryl",
+         "category": "acrylic",
+         "subtitle": null,
+         "thumbnail": "acrylic-5.jpg",
+         "description": "Ακρυλικό τσιμεντόχρωμα υψηλών προδιαγραφών, με εξαιρετικές αντοχές στα αλκάλια."
+      },
+      {
+         "title":"Durocryl",
+         "category": "acrylic",
+         "subtitle": "fiber flex",
+         "thumbnail": "acrylic-6.jpg",
+         "description": "Ινοπλισμένο ελαστομερές χρώμα & μονωτικό τοίχων."
+      },
+      {
+         "title":"Durocryl",
+         "category": "acrylic",
+         "subtitle": null,
+         "thumbnail": "acrylic-7.jpg",
+         "description": "100% Ακρυλικό επαγγελματικό χρώμα εξωτερικής χρήσης."
+      },
+      {
+         "title":"Decocryl",
+         "category": "acrylic",
+         "subtitle": null,
+         "thumbnail": "acrylic-8.jpg",
+         "description": "Ακρυλικό χρώμα γενικής χρήσης κατάλληλο για συχνό βάψιμο εξωτερικών όψεων."
+      }
+   ],
+
+   "emulsion":[
+      {
+         "title":"Superpal eco",
+         "category": "emulsion",
+         "subtitle": null,
+         "thumbnail": "emulsion-1.jpg",
+         "description": "Οικολογικό πλαστικό χρώμα κορυφαίας ποιότητας"
+      },
+      {
+         "title":"Superpal eco",
+         "category": "emulsion",
+         "subtitle": "kitchen & bathroom",
+         "thumbnail": "emulsion-2.jpg",
+         "description": "Οικολογικό αντιβακτηριακό πλαστικό χρώμα για μπάνια και κουζίνες"
+      },
+      {
+         "title":"Superpal eco",
+         "category": "emulsion",
+         "subtitle": "velvet finish",
+         "thumbnail": "emulsion-3.jpg",
+         "description": "Άοσμο - Οικολογικό σατινέ πλαστικό χρώμα"
+      },
+      {
+         "title":"Superpal classic",
+         "category": "emulsion",
+         "subtitle": null,
+         "thumbnail": "emulsion-4.jpg",
+         "description": "Πλαστικό χρώμα κορυφαίας ποιότητας"
+      },
+      {
+         "title":"Novopal",
+         "category": "emulsion",
+         "subtitle": null,
+         "thumbnail": "emulsion-5.jpg",
+         "description": "Πλαστικό χρώμα υψηλής ποιότητας για επαγγελματίες"
+      },
+      {
+         "title":"Duropal eco",
+         "category": "emulsion",
+         "subtitle": null,
+         "thumbnail": "emulsion-6.jpg",
+         "description": "Οικολογικό πλαστικό χρώμα για επαγγελματίες"
+      },
+      {
+         "title":"Duropal",
+         "category": "emulsion",
+         "subtitle": null,
+         "thumbnail": "emulsion-7.jpg",
+         "description": "Επαγγελματικό πλαστικό χρώμα εσωτερικής χρήσης"
+      },
+      {
+         "title":"Decopal",
+         "category": "emulsion",
+         "subtitle": null,
+         "thumbnail": "emulsion-8.jpg",
+         "description": "Πλαστικό χρώμα γενικής χρήσης κατάλληλο για συχνό βάψιμο εσωτερικών χώρων"
+      }
+   ],
+
+   "primer":[
+      {
+         "title":"Veradur",
+         "category": "primer",
+         "subtitle": "stain & alkali block",
+         "thumbnail": "primer-1.jpg",
+         "description": "Υπερκαλυπτικό - Αντιαλκαλικό - Μονωτικό υπόστρωμα λεκέδων, ακρυλικής βάσης"
+      },
+      {
+         "title":"Veradur",
+         "category": "primer",
+         "subtitle": "universal micro primer",
+         "thumbnail": "primer-2.jpg",
+         "description": "Μικρονιζέ ακρυλικό αστάρι νερού με νανοσωματίδια"
+      },
+      {
+         "title":"Veradur",
+         "category": "primer",
+         "subtitle": "A - 100",
+         "thumbnail": "primer-3.jpg",
+         "description": "100% ακρυλικό αστάρι γενικής χρήσης"
+      },
+      {
+         "title":"Veradur classic",
+         "category": "primer",
+         "subtitle": " ",
+         "thumbnail": "primer-4.jpg",
+         "description": "Άοσμο αστάρι νερού ακρυλικής βάσεως"
+      },
+      {
+         "title":"Spatocryl",
+         "category": "primer",
+         "subtitle": " ",
+         "thumbnail": "primer-5.jpg",
+         "description": "Ακρυλικός οικοδομικός στόκος"
+      },
+      {
+         "title":"Spatocryl",
+         "category": "primer",
+         "subtitle": "elastic",
+         "thumbnail": "primer-6.jpg",
+         "description": "Αδιάβροχος & ελαστομερής ακρυλικός στόκος ρωγμών & αρμών"
+      },
+      {
+         "title":"Durocoat",
+         "category": "primer",
+         "subtitle": " ",
+         "thumbnail": "primer-7.jpg",
+         "description": "Αδιάβροχο ακρυλικό υπόστρωμα διαλύτου"
+      },
+      {
+         "title":"Fungicide cleaner",
+         "category": "primer",
+         "subtitle": " ",
+         "thumbnail": "primer-8.jpg",
+         "description": "Ειδικό καθαριστικό κατά της μούχλας"
+      }
+   ]
+}
+

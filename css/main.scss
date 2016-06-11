@@ -10,16 +10,7 @@ $base-body-color:            #666;
 $base-heading-color:         #333;
 $base-heading-font-weight:   500;
 
-$base-h2-font-size:          22px;
-$base-h3-font-size:          17px;
-$base-h4-font-size:          15px;
-
-$base-h1-line-height:        1.4;
-$base-h2-line-height:        1.4;
-$base-h3-line-height:        1.4;
-$base-h4-line-height:        1.4;
-
-$utility-container-large-max-width:            980px;
+$utility-container-large-max-width:            1030px;
 $utility-container-large-padding-horizontal:   25px;
 
 $navbar-nav-height:          55px;
@@ -48,6 +39,7 @@ $slidenav-next-icon:         '›';
 @import "core/article";
 
 // Navs
+@import "core/nav";
 @import "core/navbar";
 @import "core/subnav";
 
@@ -60,6 +52,7 @@ $slidenav-next-icon:         '›';
 
 // JavaScript
 @import "core/dropdown";
+@import "core/offcanvas";
 
 // Need to be loaded last
 @import "core/text";
@@ -83,10 +76,21 @@ $slidenav-next-icon:         '›';
   background-repeat: no-repeat;
   height: 360px;
   position: relative;
+
+  .tm-header-logo{
+    padding: 30px 25px 45px;
+    background: $block-secondary-background;
+  }
+}
+
+.tm-site-header-mobile{
+  box-sizing: border-box;
+  padding: 15px 25px 20px;
+  background: $block-secondary-background;
 }
 
 
-$pages: ( colors, about-us, primer, metal );
+$pages: ( colors, about-us, paints, metal );
 
 @each $page in $pages {
   .hero-#{$page} {
@@ -97,10 +101,6 @@ $pages: ( colors, about-us, primer, metal );
   }
 }
 
-.tm-header-logo{
-  padding: 30px 25px 45px;
-  background: $block-secondary-background;
-}
 
 .tm-toolbar{ 
   height: 40px;
@@ -148,10 +148,10 @@ $pages: ( colors, about-us, primer, metal );
 // --------------------------------------------------
 
 .tm-products{
-    font-size: .93em;
+  margin-bottom: $utility-margin-large;
 
   .tm-product-title{
-    margin: 10px 0 0;
+    margin: $utility-margin-small 0 0;
   }
 
   .tm-product-description{
@@ -160,8 +160,7 @@ $pages: ( colors, about-us, primer, metal );
 
   .tm-product-subtitle{
     text-transform: uppercase;
-    font-size: .9em;
-    margin: 0 0 8px;
+    margin: 0 0 $utility-margin-small;
   }
 
   $colors: (

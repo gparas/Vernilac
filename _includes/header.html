@@ -1,30 +1,45 @@
-<header {% if page.title != 'Home' %}class="tm-site-header hero-{{page.title | downcase  | replace: ' ', '-'}}"{% endif %}>
-	<div class="uk-position-top uk-position-z-index">
-		<div class="uk-container uk-container-center">
-			<div class="uk-flex uk-flex-bottom">
-				<a class="tm-header-logo" href="{{ site.github.url }}/"><img src="img/logo.svg" width="240"></a>
-				<div class="uk-width-3-4">
-					<div class="tm-toolbar">
-						<ul class="uk-subnav uk-subnav-line uk-margin-remove">
-							{% for page in site.data.secondary-menu  %}
-								{% if page.text != "Πολιτική απορρήτου" and page.text != "Όροι και προϋποθέσεις" %}
-									<li><a href="{{ page.url | prepend: site.github.url }}">{{ page.text }}</a></li>
-								{% endif %}
-							{% endfor %}
-						</ul>
-					</div>
-					<nav class="uk-navbar">
-						<ul class="uk-navbar-nav">
-							{% for page in site.data.main-menu %}
-								<li><a href="{{ page.url | prepend: site.github.url }}">{{ page.text }}</a></li>
-							{% endfor %}
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</div>
-	</div>
-	{% if page.overlay == true %}
-		<div class="uk-overlay-panel uk-overlay-background"></div>
-	{% endif %}
+<header class="uk-hidden-small {% if page.title != 'Home' %}tm-site-header hero-{{page.title | downcase  | replace: ' ', '-'}}{% endif %}">
+  <div class="uk-position-top uk-position-z-index">
+    <div class="uk-container uk-container-center">
+      <div class="uk-flex uk-flex-bottom">
+        <a class="tm-header-logo" href="{{ site.github.url }}/"><img src="img/logo.svg" width="240"></a>
+        <div class="uk-width-3-4">
+          <div class="tm-toolbar">
+            <ul class="uk-subnav uk-subnav-line uk-margin-remove">
+              {% for item in site.data.menu.secondary-menu %}
+                {% if item.text != "Πολιτική απορρήτου" and item.text != "Όροι και προϋποθέσεις" %}
+                <li><a href="{{ item.url | prepend: site.github.url }}">{{ item.text }}</a></li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+          <nav class="uk-navbar">
+            <ul class="uk-navbar-nav">
+              {% for item in site.data.menu.main-menu %}
+                {% if item.submenu != null %}
+                <li class="uk-parent {% if item.url == page.url %}uk-active{% endif %}" data-uk-dropdown >
+                  <a href="{{ item.url | prepend: site.github.url }}">{{ item.text }}</a>
+                  <div class="uk-dropdown uk-dropdown-navbar">
+                    <ul class="uk-nav uk-nav-navbar">
+                      {% for subitem in item.submenu %}
+                      <li><a href="{{ subitem.url | prepend: site.github.url }}">{{ subitem.text }}</a></li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                </li>
+                {% else %}
+                <li {% if item.url == page.url %}class="uk-active"{% endif %} >
+                  <a href="{{ item.url | prepend: site.github.url }}">{{ item.text }}</a>
+                </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% if page.overlay == true %}
+  <div class="uk-overlay-panel uk-overlay-background"></div>
+  {% endif %}
 </header>

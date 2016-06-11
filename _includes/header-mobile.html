@@ -1,0 +1,33 @@
+<header class="uk-visible-small tm-site-header-mobile">
+    <div class="uk-flex uk-flex-middle uk-flex-space-between">
+      <a href="{{ site.github.url }}/"><img src="img/logo.svg" width="240"></a>
+      <a href="#my-id" data-uk-offcanvas>open</a>
+    </div>
+</header>
+
+<div id="my-id" class="uk-offcanvas">
+    <div class="uk-offcanvas-bar uk-offcanvas-bar-flip">
+        <ul class="uk-nav uk-nav-offcanvas" data-uk-nav>
+          {% for item in site.data.menu.main-menu %}
+            {% if item.submenu != null %}
+            <li class="uk-parent {% if item.url == page.url %}uk-active{% endif %}" data-uk-dropdown >
+              <a href="{{ item.url | prepend: site.github.url }}">{{ item.text }}</a>
+              <ul class="uk-nav-sub">
+                {% for subitem in item.submenu %}
+                <li><a href="{{ subitem.url | prepend: site.github.url }}">{{ subitem.text }}</a></li>
+                {% endfor %}
+              </ul>
+            </li>
+            {% else %}
+            <li {% if item.url == page.url %}class="uk-active"{% endif %} >
+              <a href="{{ item.url | prepend: site.github.url }}">{{ item.text }}</a>
+            </li>
+            {% endif %}
+          {% endfor %}
+
+          {% for item in site.data.menu.secondary-menu %}
+            <li><a href="{{ item.url | prepend: site.github.url }}">{{ item.text }}</a></li>
+          {% endfor %}
+        </ul>
+    </div>
+</div>

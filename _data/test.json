@@ -1,0 +1,49 @@
+{
+   "main-menu": [
+      {
+         "text": "Χρώματα",
+         "url": "/colors.html"
+      },
+      {
+         "text": "Έμπνευση",
+         "url": "/"
+      },
+      {
+         "text": "Προϊόντα",
+         "url": "/paints.html",
+         "submenu": [
+            {
+               "text": "test",
+               "url": "/"
+            },
+            {
+               "text": "test",
+               "url": "/"
+            }
+         ]
+      },
+      {
+         "text": "Tips",
+         "url": "/"
+      },
+   ],
+   "secondary-menu": [
+      {
+         "text": "Η εταιρεία",
+         "url": "/about-us.html"
+      },
+      {
+         "text": "Επικοινωνία",
+         "url": "/"
+      },
+      {
+         "text": "Πολιτική απορρήτου",
+         "url": "/"
+      },
+      {
+         "text": "Όροι και προϋποθέσεις",
+         "url": "/"
+      }
+   ]
+}
+
