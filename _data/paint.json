@@ -2,6 +2,8 @@
    "acrylic": {
       "header": "Ακρυλικά χρώματα",
       "lead": "Ακρυλικά χρώματα κορυφαίας ποιότητας",
+      "url": "/acrylic.html",
+      "url-text": "Acrylic",
       "data": [
          {
             "title":"Acrylic Paint",
@@ -59,6 +61,8 @@
    "emulsion": {
       "header": "Πλαστικά χρώματα",
       "lead": "Πλαστικά χρώματα κορυφαίας ποιότητας",
+      "url": "/emulsion.html",
+      "url-text": "Emulsion",
       "data": [
          {
             "title":"Superpal eco",
@@ -115,6 +119,8 @@
    "primer": {
       "header": "Υποστρώματα – Αστάρια τοίχων",
       "lead": "Κορυφαίας ποιότητας",
+      "url": "/primer.html",
+      "url-text": "Primer",
       "data": [
          {
             "title":"Veradur",

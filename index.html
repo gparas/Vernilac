@@ -6,49 +6,28 @@ title: Home
 <div class="uk-container uk-container-center">
 	<section class="tm-home">
 		<div class="uk-grid uk-grid-small">
-			<div class="uk-width-medium-1-2 uk-grid-margin">
-				<figure class="uk-overlay uk-overlay-hover">
-					<img class="uk-overlay-scale" src="img/home/banner-color_paint_palette.jpg">
-					<div class="uk-overlay-panel uk-overlay-background uk-overlay-bottom uk-ignore">
-						<h3>Colors</h3>
-						See Our colors
-					</div>
-					<a class="uk-position-cover" href="/colors.html"></a>
-				</figure>
-			</div>
-			<div class="uk-width-medium-1-2 uk-grid-margin">
-				<figure class="uk-overlay uk-overlay-hover">
-					<img class="uk-overlay-scale" src="img/home/banner-inspiration.jpg">
-					<figcaption class="uk-overlay-panel uk-overlay-background uk-overlay-bottom uk-ignore">
-						<h3>Inspiration</h3>
-						Get inspired
-					</figcaption>
-				</figure>
-			</div>
-			<div class="uk-width-medium-1-2 uk-grid-margin">
-				<figure class="uk-overlay uk-overlay-hover">
-					<img class="uk-overlay-scale" src="img/home/banner-products.jpg">
-					<div class="uk-overlay-panel uk-overlay-background uk-overlay-bottom uk-ignore">
-						<h3>Products</h3>
-						See Our products
-					</div>
-					<a class="uk-position-cover" href="/paints.html"></a>
-				</figure>
-			</div>
-			<div class="uk-width-medium-1-2 uk-grid-margin">
-				<figure class="uk-overlay uk-overlay-hover">
-					<img class="uk-overlay-scale" src="img/home/banner-tips.jpg">
-					<figcaption class="uk-overlay-panel uk-overlay-background uk-overlay-bottom uk-ignore">
-						<h3>Tips</h3>
-						Useful tips
-					</figcaption>
-				</figure>
-			</div>
+			{% for cat in site.data.menu.main-menu %}
+				{% assign src = cat.url  | remove_first: "/" | replace: '.html', '' %}
+				<div class="uk-width-medium-1-2 uk-grid-margin">
+					<figure class="uk-overlay uk-overlay-hover">
+						<img class="uk-overlay-scale" src="img/home/banner-{{ src }}.jpg">
+						<div class="uk-overlay-panel uk-overlay-background uk-overlay-bottom uk-ignore">
+							<h3>{{ cat.text }}</h3>
+							{% if cat.text == "Έμπνευση" %}
+								Ιδέες για το χώρο σας
+							{% else %}
+								Δείτε τα {{ cat.text }}
+							{% endif %}
+						</div>
+						<a class="uk-position-cover" href="{{ cat.url | prepend: site.github.url }}"></a>
+					</figure>
+				</div>
+			{% endfor %}
 		</div>
 	</section>
 	<div class="uk-block uk-block-large">
 		<h3 class="uk-text-center">Color Trends</h3>
-		<div data-uk-slideset="{default: 4, large: 10, animation: 'scale', duration: 100}">
+		<div data-uk-slideset="{default: 4, medium: 6, large: 10, animation: 'scale', duration: 100}">
 			<div class="uk-slidenav-position">
 				<ul class="uk-grid uk-grid-collapse uk-slideset">
 					<li><img data-src="holder.js/100x91?bg=#E18C9E&fg=#E18C9E"></li>

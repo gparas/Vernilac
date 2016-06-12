@@ -147,32 +147,19 @@ $pages: ( colors, about-us, paints, metal );
 // Products
 // --------------------------------------------------
 
-.tm-products{
-  margin-bottom: $utility-margin-large;
+.tm-product-subtitle{
+  text-transform: uppercase;
+  margin: 0 0 $utility-margin-small;
+}
 
-  .tm-product-title{
-    margin: $utility-margin-small 0 0;
+$colors: (
+  primer:   (#4D9DC8),
+  emulsion: (#4D9DC8),
+  acrylic:  (#F98E35)
+);
+
+@each $color, $properties in $colors {
+  .tm-text-#{$color} {
+    color: nth($properties, 1);
   }
-
-  .tm-product-description{
-    margin: 0;
-  }
-
-  .tm-product-subtitle{
-    text-transform: uppercase;
-    margin: 0 0 $utility-margin-small;
-  }
-
-  $colors: (
-    primer:   (#4D9DC8),
-    emulsion: (#4D9DC8),
-    acrylic:  (#F98E35)
-  );
-
-  @each $color, $properties in $colors {
-    .tm-text-#{$color} {
-      color: nth($properties, 1);
-    }
-  }
-
 }

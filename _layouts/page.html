@@ -1,15 +1,12 @@
 ---
 layout: default
 ---
-<div class="uk-block">
-	<div class="uk-container uk-container-center">
-		<article class="uk-article">
-			<header>
-				<h1 class="uk-article-title">{{ page.header }}</h1>
-				<p class="uk-article-lead">{{page.lead}}</p>
-			</header>
-			<hr class="uk-article-divider" />
-    		{{ content }}
-		</article>
-	</div>
-</div>
+
+<article class="uk-article">
+	<header>
+		<h1 class="uk-article-title">{{ page.header }}</h1>
+		<p class="uk-article-lead">{{page.lead}}</p>
+	</header>
+	<hr class="uk-article-divider" />
+	{{ content }}
+</article>

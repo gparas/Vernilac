@@ -6,11 +6,11 @@
       },
       {
          "text": "Έμπνευση",
-         "url": "/"
+         "url": "/inspiration.html"
       },
       {
          "text": "Προϊόντα",
-         "url": "/paints.html",
+         "url": "/products.html",
          "submenu": [
             {
                "text": "test",
@@ -24,7 +24,7 @@
       },
       {
          "text": "Tips",
-         "url": "/"
+         "url": "/tips.html"
       },
    ],
    "secondary-menu": [
@@ -44,6 +44,6 @@
          "text": "Όροι και προϋποθέσεις",
          "url": "/"
       }
-   ]
+   ],
 }
 

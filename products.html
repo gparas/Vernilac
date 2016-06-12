@@ -1,7 +1,26 @@
 ---
 layout: default
-title: Products
+title: Paints
+overlay: true
 ---
 
-{% assign products = site.data.paint.acrylic %}
-{% include product-list.html %}
+{% assign paint = site.data.paint %}
+
+
+<ul>
+  {% for item in paint %}
+  <li><a href="{{ item.[1].url | prepend: site.github.url }}">{{ item.[1].url-text }}</a></li>
+  {% endfor %}
+</ul>
+
+{% for collection in paint %}
+<article class="uk-block">
+  <header>
+    <h1 class="uk-article-title">{{ collection.[1].header }}</h1>
+    <p class="uk-article-lead">{{ collection.[1].lead }}</p>
+  </header>
+  <hr class="uk-article-divider" />
+  {% assign products = collection.[1].data %}
+  {% include product-list.html %}
+</article>
+{% endfor %}
