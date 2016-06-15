@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+{% assign paint = site.data.paint %}
+
+<div class="uk-grid uk-grid-divider">
+  <div class="uk-width-1-4 uk-hidden-small">
+    {% include products-sidebar.html %}
+  </div>
+  <div class="uk-width-medium-3-4 uk-width-1-1">
+    <article class="uk-article">
+      <h1 class="uk-article-title">{{ page.header }}</h1>
+      <p class="uk-article-lead">{{page.lead}}</p>
+      <hr class="uk-article-divider" />
+      {{ content }}
+    </article>
+  </div>
+</div>

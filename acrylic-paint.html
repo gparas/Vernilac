@@ -1,0 +1,12 @@
+---
+layout: product-page
+title: acrylic paint
+header: Acrylic Paint
+lead: 100% ακρυλικό χρώμα κορυφαίας ποιότητας
+---
+
+{% assign product-item = site.data.paint.acrylic.data.[0] %}
+{% include product-item.html %}
+
+{% assign related-product = site.data.paint.acrylic.data %}
+{% include related-products.html %}

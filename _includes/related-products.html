@@ -1,0 +1,19 @@
+<div class="uk-block">
+	<h3 class="uk-text-center">Δείτε επίσης στην κατηγορία:</h3>
+	<div data-uk-slideset="{default: 2, medium: 4, large: 5, animation: 'scale', duration: 100}">
+		<div class="uk-slidenav-position">
+			<ul class="uk-grid uk-slideset">
+				{% for paint in related-product %}
+					<div>
+						<a class="uk-display-block" href="{{ paint.url | prepend: site.github.url }}">
+							<img src="img/products/{{ paint.thumbnail }}" alt="{{ paint.title }} {% if subtitle %}{{ subtitle }}{% endif %}">
+						</a>
+						<p class="uk-text-center uk-text-bold">{{ paint.title }}</p>
+					</div>
+				{% endfor %}
+			</ul>
+			<a href="#" class="uk-slidenav uk-slidenav-previous" data-uk-slideset-item="previous"></a>
+			<a href="#" class="uk-slidenav uk-slidenav-next" data-uk-slideset-item="next"></a>
+		</div>
+	</div>
+</div>

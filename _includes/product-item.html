@@ -1,0 +1,16 @@
+<div class="uk-grid">
+	<div class="uk-width-medium-1-3 uk-width-1-1">
+		<img src="img/products/{{ product-item.thumbnail }}" alt="{{ product-item.title }} {% if subtitle %}{{ subtitle }}{% endif %}">
+	</div>
+	<div class="uk-width-medium-2-3 uk-width-1-1">
+		<p>{{ product-item.description }}</p>
+	</div>
+</div>
+<div class="uk-panel uk-panel-box uk-margin-large-top">
+	<dl class="uk-description-list-horizontal">
+		{% for tab in product-item.tabs %}
+	    	<dt>{{tab.title}}</dt>
+	    	<dd>{{tab.description}}</dd>
+		{% endfor %}
+	</dl>
+</div>

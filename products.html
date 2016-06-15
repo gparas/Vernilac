@@ -6,21 +6,27 @@ overlay: true
 
 {% assign paint = site.data.paint %}
 
+<div class="uk-grid uk-grid-divider">
+  <div class="uk-width-1-4">
+      <ul class="uk-nav uk-nav-side">
+        <li class="uk-nav-header">Προϊοντα</li>
+        {% for item in paint %}
+        <li><a href="{{ item.[1].url | prepend: site.github.url }}">{{ item.[1].url-text }}</a></li>
+        {% endfor %}
+      </ul>
+  </div>
+  <div class="uk-width-3-4">
+    {% for collection in paint %}
+    <article class="uk-article">
+      <header>
+        <h1 class="uk-article-title">{{ collection.[1].header }}</h1>
+        <p class="uk-article-lead">{{ collection.[1].lead }}</p>
+      </header>
+      <hr class="uk-article-divider" />
+      {% assign products = collection.[1].data %}
+      {% include product-grid.html %}
+    </article>
+    {% endfor %}
+  </div>
+</div>
 
-<ul>
-  {% for item in paint %}
-  <li><a href="{{ item.[1].url | prepend: site.github.url }}">{{ item.[1].url-text }}</a></li>
-  {% endfor %}
-</ul>
-
-{% for collection in paint %}
-<article class="uk-block">
-  <header>
-    <h1 class="uk-article-title">{{ collection.[1].header }}</h1>
-    <p class="uk-article-lead">{{ collection.[1].lead }}</p>
-  </header>
-  <hr class="uk-article-divider" />
-  {% assign products = collection.[1].data %}
-  {% include product-list.html %}
-</article>
-{% endfor %}

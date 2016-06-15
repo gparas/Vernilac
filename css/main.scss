@@ -10,8 +10,8 @@ $base-body-color:            #666;
 $base-heading-color:         #333;
 $base-heading-font-weight:   500;
 
-$utility-container-large-max-width:            1030px;
-$utility-container-large-padding-horizontal:   25px;
+$utility-container-large-max-width:            1170px;
+// $utility-container-large-padding-horizontal:   25px;
 
 $navbar-nav-height:          55px;
 $navbar-nav-font-size:       15px;
@@ -35,6 +35,7 @@ $slidenav-next-icon:         '›';
 
 // Layout
 @import "core/grid";
+@import "core/panel";
 @import "core/block";
 @import "core/article";
 
@@ -42,9 +43,12 @@ $slidenav-next-icon:         '›';
 @import "core/nav";
 @import "core/navbar";
 @import "core/subnav";
+@import "core/tab";
 
 // Elements
 @import "core/list";
+@import "core/description-list";
+@import "core/table";
 
 // Common
 @import "core/animation";
@@ -52,6 +56,7 @@ $slidenav-next-icon:         '›';
 
 // JavaScript
 @import "core/dropdown";
+@import "core/switcher";
 @import "core/offcanvas";
 
 // Need to be loaded last
@@ -90,7 +95,7 @@ $slidenav-next-icon:         '›';
 }
 
 
-$pages: ( colors, about-us, paints, metal );
+$pages: ( colors, about-us, paints, metal, acrylic-paint, acrylic-matt );
 
 @each $page in $pages {
   .hero-#{$page} {
@@ -104,6 +109,10 @@ $pages: ( colors, about-us, paints, metal );
 
 .tm-toolbar{ 
   height: 40px;
+  background: -webkit-linear-gradient(90deg, rgba($block-secondary-background, .6), transparent);
+  background: -o-linear-gradient(90deg, rgba($block-secondary-background, .6), transparent);
+  background: -moz-linear-gradient(90deg, rgba($block-secondary-background, .6), transparent);
+  background: linear-gradient(90deg, rgba($block-secondary-background, .6), transparent);
 
   a{
     color: #fff;
@@ -147,19 +156,16 @@ $pages: ( colors, about-us, paints, metal );
 // Products
 // --------------------------------------------------
 
-.tm-product-subtitle{
-  text-transform: uppercase;
-  margin: 0 0 $utility-margin-small;
-}
-
 $colors: (
   primer:   (#4D9DC8),
   emulsion: (#4D9DC8),
   acrylic:  (#F98E35)
-);
+  );
 
 @each $color, $properties in $colors {
   .tm-text-#{$color} {
+    text-transform: uppercase;
+    font-size: 12px;
     color: nth($properties, 1);
   }
 }

@@ -1,0 +1,8 @@
+{% assign paint = site.data.paint %}
+
+<ul class="uk-nav uk-nav-side">
+  <li class="uk-nav-header">Προϊοντα</li>
+  {% for item in paint %}
+    <li><a href="{{ item.[1].url | prepend: site.github.url }}">{{ item.[1].url-text }}</a></li>
+  {% endfor %}
+</ul>

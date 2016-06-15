@@ -1,0 +1,19 @@
+{% for paint in products %}
+<div class="uk-grid uk-grid-margin">
+  <div class="uk-width-medium-1-4 uk-width-1-3">
+    <a href="{{ paint.url | prepend: site.github.url }}">
+      <img src="img/products/{{ paint.thumbnail }}" alt="{{ paint.title }} {% if subtitle %}{{ subtitle }}{% endif %}">
+    </a>
+  </div>
+  <div class="uk-width-medium-3-4 uk-width-2-3">
+    <h3 class="uk-margin-top uk-margin-bottom-remove">
+      {{ paint.title }}
+      {% if paint.subtitle != null %}
+        - <span class="tm-text-{{ paint.category }}">{{ paint.subtitle }}</span>
+      {% endif %}
+    </h3>
+    <p class="uk-text-bold uk-margin-remove">{{ paint.lead }}</p>
+    <p class="uk-margin-remove">{{ paint.description | truncatewords: 20}}</p>
+  </div>  
+</div>
+{% endfor %}
