@@ -1,4 +1,9 @@
-<header class="uk-hidden-small {% if page.title != 'Home' %}tm-site-header tm-gradient hero-{{page.title | downcase  | replace: ' ', '-'}}{% endif %}">
+<header class="uk-hidden-small 
+  {% if page.title != 'Home' %}
+    tm-site-header 
+    tm-gradient 
+    hero-{{page.title | downcase  | replace: ' ', '-'}}
+  {% endif %}">
   <div class="uk-position-top uk-position-z-index">
     <div class="uk-container uk-container-center">
       <div class="uk-flex uk-flex-bottom">

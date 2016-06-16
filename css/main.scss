@@ -10,7 +10,7 @@ $base-body-color:            #666;
 $base-heading-color:         #333;
 $base-heading-font-weight:   500;
 
-$utility-container-large-max-width:            1170px;
+$utility-container-large-max-width:            1050px;
 // $utility-container-large-padding-horizontal:   25px;
 
 $navbar-background:          #fff;
@@ -97,7 +97,7 @@ $slidenav-next-icon:         '›';
 }
 
 
-$pages: ( colors, about-us, paints, metal, acrylic, acrylic-paint, acrylic-matt, emulsion, primer );
+$pages: ( wood, colors, about-us, paints, metal, acrylic, acrylic-paint, acrylic-matt, emulsion, primer );
 
 @each $page in $pages {
   .hero-#{$page} {
@@ -153,10 +153,8 @@ $pages: ( colors, about-us, paints, metal, acrylic, acrylic-paint, acrylic-matt,
 .tm-page{
   position: relative;
   background: #fff;
-  box-sizing: border-box;
-  max-width: 1100px;
-  margin: -240px auto 0;
-  padding: 50px 35px;
+  margin-top: -240px;
+  padding: 50px;
   border-radius: 6px 6px 0 0;
 
   &.tm-home{
