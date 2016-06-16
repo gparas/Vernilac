@@ -13,6 +13,7 @@ $base-heading-font-weight:   500;
 $utility-container-large-max-width:            1170px;
 // $utility-container-large-padding-horizontal:   25px;
 
+$navbar-background:          #fff;
 $navbar-nav-height:          55px;
 $navbar-nav-font-size:       15px;
 
@@ -63,6 +64,7 @@ $slidenav-next-icon:         '›';
 @import "core/text";
 @import "core/utility";
 @import "core/flex";
+@import "core/contrast";
 
 //
 // Components
@@ -76,10 +78,10 @@ $slidenav-next-icon:         '›';
 // --------------------------------------------------
 
 .tm-site-header{
-  background-position: 50% 50%;
+  background-position: 50% 60%;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 360px;
+  height: 640px;
   position: relative;
 }
 
@@ -95,7 +97,7 @@ $slidenav-next-icon:         '›';
 }
 
 
-$pages: ( colors, about-us, paints, metal, acrylic-paint, acrylic-matt );
+$pages: ( colors, about-us, paints, metal, acrylic, acrylic-paint, acrylic-matt, emulsion, primer );
 
 @each $page in $pages {
   .hero-#{$page} {
@@ -145,12 +147,21 @@ $pages: ( colors, about-us, paints, metal, acrylic-paint, acrylic-matt );
   }
 }
 
-// Home page
+// Page
 // --------------------------------------------------
 
-.tm-home{
+.tm-page{
   position: relative;
-  margin-top: -80px;
+  background: #fff;
+  box-sizing: border-box;
+  max-width: 1100px;
+  margin: -240px auto 0;
+  padding: 50px 35px;
+  border-radius: 6px 6px 0 0;
+
+  &.tm-home{
+    background: transparent;
+  }
 }
 
 // Products
@@ -167,5 +178,18 @@ $colors: (
     text-transform: uppercase;
     font-size: 12px;
     color: nth($properties, 1);
+  }
+}
+
+// Utility
+// --------------------------------------------------
+
+.tm-padding-horizontal-remove{
+  padding-left: 0;
+  padding-right: 0;
+
+  &.uk-nav > li > a{
+    padding-left: 0;
+    padding-right: 0;    
   }
 }

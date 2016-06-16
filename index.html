@@ -3,27 +3,25 @@ layout: default
 title: Home
 ---
 
-<section class="tm-home">
-	<div class="uk-grid uk-grid-small">
-		{% for cat in site.data.menu.main-menu %}
-			{% assign src = cat.url  | remove_first: "/" | replace: '.html', '' %}
-			<div class="uk-width-medium-1-2 uk-grid-margin">
-				<figure class="uk-overlay uk-overlay-hover">
-					<img class="uk-overlay-scale" src="img/home/banner-{{ src }}.jpg">
-					<div class="uk-overlay-panel uk-overlay-background uk-overlay-bottom uk-ignore">
-						<h3>{{ cat.text }}</h3>
-						{% if cat.text == "Έμπνευση" %}
-							Ιδέες για το χώρο σας
-						{% else %}
-							Δείτε τα {{ cat.text }}
-						{% endif %}
-					</div>
-					<a class="uk-position-cover" href="{{ cat.url | prepend: site.github.url }}"></a>
-				</figure>
-			</div>
-		{% endfor %}
-	</div>
-</section>
+<div class="uk-grid uk-grid-small">
+	{% for cat in site.data.menu.main-menu %}
+		{% assign src = cat.url  | remove_first: "/" | replace: '.html', '' %}
+		<div class="uk-width-medium-1-2 uk-grid-margin">
+			<figure class="uk-overlay uk-overlay-hover">
+				<img class="uk-overlay-scale" src="img/home/banner-{{ src }}.jpg">
+				<div class="uk-overlay-panel uk-overlay-background uk-overlay-bottom uk-ignore">
+					<h3>{{ cat.text }}</h3>
+					{% if cat.text == "Έμπνευση" %}
+						Ιδέες για το χώρο σας
+					{% else %}
+						Δείτε τα {{ cat.text }}
+					{% endif %}
+				</div>
+				<a class="uk-position-cover" href="{{ cat.url | prepend: site.github.url }}"></a>
+			</figure>
+		</div>
+	{% endfor %}
+</div>
 <div class="uk-block">
 	<h3 class="uk-text-center">Color Trends</h3>
 	<div data-uk-slideset="{default: 4, medium: 6, large: 10, animation: 'scale', duration: 100}">

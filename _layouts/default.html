@@ -12,7 +12,7 @@
 		{% include home-slideshow.html %}
 	{% endif %}
 	
-	<div class="uk-block">
+	<div class="tm-page {% if page.title == 'Home' %}tm-home{% endif %}">
 		<div class="uk-container uk-container-center">
 			{{ content }}
 		</div>
