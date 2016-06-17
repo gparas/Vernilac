@@ -1,52 +1,40 @@
 ---
-layout: default
+layout: page
 title: Colors
 header: Color Creations
 lead: Χρωματολόγιο
 ---
 
-<div class="container">
-	<h1 class="title-lg">{{page.header}}</h1>
-	<p class="lead text-warning"><b>{{page.lead}}</b></p>
-</div>
+{% for color in site.data.colors.creations %}
 
+	{% capture modulo %}{{ forloop.index0 | mod:18 }}{% endcapture %}
 
-{% assign products = color.products | replace: ',', ' ' %}
+	{% if modulo == '0' or forloop.first %}
+	<ul class="color-grid uk-clearfix" role="tablist">
+	{% endif %}
 
-<div class="block block-lg">
-	<div class="container">
+		<li role="presentation">
+			<a class="color-trigger" href="#{{ color.code }}" aria-controls="{{ color.code }}" role="tab" data-toggle="tab" style="background-color: rgb({{ color.rgb }});">
+				<span class="sr-only">{{ color.code }}</span>
+			</a>
+		</li>
 
-		{% for color in site.data.colors.creations %}
+	{% if modulo == '17' or forloop.last %}
+	</ul>
+	{% endif %}
 
-		{% capture modulo %}{{ forloop.index0 | mod:18 }}{% endcapture %}
+	
 
-		{% if modulo == '0' or forloop.first %}
-		<ul class="color-grid" role="tablist">
-			{% endif %}
+{% endfor %}
 
-			<li role="presentation">
-				<a class="color-trigger" href="#{{ color.code }}" aria-controls="{{ color.code }}" role="tab" data-toggle="tab" style="background-color: rgb({{ color.rgb }});">
-					<span class="sr-only">{{ color.code }}</span>
-				</a>
-			</li>
-
-			{% if modulo == '17' or forloop.last %}
-		</ul>
-		{% endif %}
-
-		{% endfor %}
-
-		<div class="tab-content">
-			{% for color in site.data.colors.creations  %}
-			<div role="tabpanel" class="tab-pane color-description" id="{{ color.code }}" style="background-color: rgb({{ color.rgb }});">
-				<button type="button" class="close close-tab" data-dismiss="tab-pane" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<h3>{{ color.title-GR }}</h3>
-				<h3 class="mg-lg">{{ color.code }}</h3>
-				<p class="sub-title">Κωδικοί προϊόντων:</p>
-				<p class="relevant-products">{{ color.products | replace: ',', ' <br>' }}</p>
-			</div>
-			{% endfor %}
-		</div>
-
+<div class="uk-hidden">
+	{% for color in site.data.colors.creations  %}
+	<div class="uk-panel uk-panel-space" id="{{ color.code }}" style="background-color: rgb({{ color.rgb }});">
+		<button type="button" class="close close-tab" data-dismiss="tab-pane" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		<h3>{{ color.title-GR }}</h3>
+		<h3 class="mg-lg">{{ color.code }}</h3>
+		<p class="sub-title">Κωδικοί προϊόντων:</p>
+		<p class="relevant-products">{{ color.products | replace: ',', ' <br>' }}</p>
 	</div>
+	{% endfor %}
 </div>
