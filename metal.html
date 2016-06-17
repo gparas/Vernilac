@@ -1,0 +1,15 @@
+---
+layout: product-page
+title: metal
+header: Βερνικοχρώματα
+lead: Κορυφαίας ποιότητας
+---
+
+{% assign products = site.data.paint.metal.data %}
+{% include product-grid.html %}
+
+{% assign products = site.data.paint.metal-primer.data %}
+<h3 class="uk-article-title uk-margin-large-top">{{ site.data.paint.metal-primer.header }}</h3>
+<p class="uk-article-lead">{{ site.data.paint.metal-primer.lead }}</p>
+<hr class="uk-article-divider">
+{% include product-grid.html %}

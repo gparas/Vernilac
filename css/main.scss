@@ -153,9 +153,15 @@ $pages: ( wood, colors, about-us, paints, metal, acrylic, acrylic-paint, acrylic
 .tm-page{
   position: relative;
   background: #fff;
-  margin-top: -240px;
-  padding: 50px;
-  border-radius: 6px 6px 0 0;
+  padding-top: $block-padding-vertical;
+  padding-bottom: $block-padding-vertical;
+
+  @media (min-width: $breakpoint-medium){
+    margin-top: -240px;
+    padding: $block-padding-vertical-large;
+    border-radius: 6px 6px 0 0;
+
+  }
 
   &.tm-home{
     background: transparent;

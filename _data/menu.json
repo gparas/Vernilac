@@ -13,12 +13,24 @@
          "url": "/products.html",
          "submenu": [
             {
-               "text": "test",
-               "url": "/"
+               "text": "Εξωτερικούς Χώρους",
+               "url": "/acrylic.html"
             },
             {
-               "text": "test",
-               "url": "/"
+               "text": "Εσωτερικούς Χώρους",
+               "url": "/emulsion.html"
+            },
+            {
+               "text": "Υποστρώματα – Αστάρια τοίχων",
+               "url": "/primer.html"
+            },
+            {
+               "text": "Ξύλινες Επιφάνειες",
+               "url": "/wood.html"
+            },
+            {
+               "text": "Μεταλλικές Επιφάνειες",
+               "url": "/metal.html"
             }
          ]
       },
