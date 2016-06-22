@@ -6,12 +6,13 @@
 // 
 // Custom Variables
 // --------------------------------------------------
+$base-body-background:       #E4E4E4;
 $base-body-color:            #666;
 $base-heading-color:         #333;
 $base-heading-font-weight:   500;
 
-$utility-container-large-max-width:            1050px;
-// $utility-container-large-padding-horizontal:   25px;
+$utility-container-large-max-width:            1260px;
+$utility-container-large-padding-horizontal:   40px;
 
 $navbar-background:          #fff;
 $navbar-nav-height:          55px;
@@ -78,11 +79,12 @@ $slidenav-next-icon:         '›';
 // --------------------------------------------------
 
 .tm-site-header{
-  background-position: 50% 60%;
+  background-position: 50% 100%;
   background-size: cover;
   background-repeat: no-repeat;
   height: 640px;
   position: relative;
+  padding: 0 $utility-container-large-padding-horizontal;
 }
 
 .tm-header-logo{
@@ -133,9 +135,11 @@ $pages: ( wood, colors, about-us, paints, metal, acrylic, acrylic-paint, acrylic
     content: '';
     display: block;
     width: 100%;
-    height: 150px;
+    height: 400px;
     position: absolute;
     bottom: 0;
+    left: 0;
+    right: 0;
     background: linear-gradient(rgba(0, 0, 0, 0), #FFF);
   }
 }
@@ -153,14 +157,14 @@ $pages: ( wood, colors, about-us, paints, metal, acrylic, acrylic-paint, acrylic
 .tm-page{
   position: relative;
   background: #fff;
-  padding-top: $block-padding-vertical;
-  padding-bottom: $block-padding-vertical;
+  padding: $block-padding-vertical;
 
   @media (min-width: $breakpoint-medium){
-    margin-top: -240px;
     padding: $block-padding-vertical-large;
-    border-radius: 6px 6px 0 0;
 
+    .uk-article{
+      margin-top: -210px;
+    }
   }
 
   &.tm-home{

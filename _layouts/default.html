@@ -5,17 +5,19 @@
 
 <body>
 	
-	{% include header.html %}
-	{% include header-mobile.html %}
-	
-	{% if page.title == 'Home' %}
-		{% include home-slideshow.html %}
-	{% endif %}
-	
 	<div class="uk-container uk-container-center">
-		<div class="tm-page {% if page.title == 'Home' %}tm-home{% endif %}">
+		{% include header.html %}
+		{% include header-mobile.html %}
+	
+		{% if page.title == 'Home' %}
+			{% include home-slideshow.html %}
+		{% endif %}
+		
+		<div class="tm-page">
 			{{ content }}
 		</div>
+		<!-- <div class="tm-page {% if page.title == 'Home' %}tm-home{% endif %}">
+		</div> -->
 	</div>
 
 	{% include footer.html %}
