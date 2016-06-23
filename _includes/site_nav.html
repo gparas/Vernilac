@@ -1,4 +1,4 @@
-<header class="uk-hidden-small {% if page.title != 'Home' %}tm-site-header tm-gradient hero-{{page.title | downcase  | replace: ' ', '-'}}{% endif %}">
+<div id="tm-nav" class="uk-position-top">
   <div class="uk-flex uk-flex-bottom">
     <a class="tm-header-logo" href="{{ site.github.url }}/"><img src="img/logo.svg" width="240"></a>
     <div class="uk-width-3-4">
@@ -38,7 +38,4 @@
       </nav>
     </div>
   </div>
-  {% if page.overlay == true %}
-  <div class="uk-overlay-panel uk-overlay-background"></div>
-  {% endif %}
-</header>
+</div>

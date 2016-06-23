@@ -23,6 +23,8 @@ $block-muted-background:     #f2f2f2;
 $slidenav-previous-icon:     '‹';
 $slidenav-next-icon:         '›';
 
+$overlay-panel-background:   rgba(0,0,0,0.3);
+
 
 //
 // Core
@@ -40,6 +42,7 @@ $slidenav-next-icon:         '›';
 @import "core/panel";
 @import "core/block";
 @import "core/article";
+@import "core/cover";
 
 // Navs
 @import "core/nav";
@@ -55,6 +58,7 @@ $slidenav-next-icon:         '›';
 // Common
 @import "core/animation";
 @import "core/overlay";
+@import "core/column";
 
 // JavaScript
 @import "core/dropdown";
@@ -75,18 +79,50 @@ $slidenav-next-icon:         '›';
 @import "components/slideshow";
 
 
-// Site header
+// uk-block
 // --------------------------------------------------
 
-.tm-site-header{
-  background-position: 50% 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 640px;
-  position: relative;
-  padding: 0 $utility-container-large-padding-horizontal;
+#tm-hero,
+#tm-main,
+#tm-footer{
+  &.uk-block{
+    @media (min-width: $breakpoint-medium){
+      padding-left: $block-padding-vertical-large;
+      padding-right: $block-padding-vertical-large;
+    }
+    @media (min-width: $breakpoint-large){
+      padding-left: $block-large-padding-vertical-large;
+      padding-right: $block-large-padding-vertical-large;
+    }
+  }
 }
 
+// tm-nav
+// --------------------------------------------------
+
+#tm-nav{
+  z-index: 4;
+
+  @media (min-width: $breakpoint-medium){
+    padding-left: $block-padding-vertical-large;
+    padding-right: $block-padding-vertical-large;
+  }
+  @media (min-width: $breakpoint-large){
+    padding-left: $block-large-padding-vertical-large;
+    padding-right: $block-large-padding-vertical-large;
+  }
+}
+
+// tm-header
+// --------------------------------------------------
+
+#tm-header-title{
+  position: relative;
+  z-index: 1;
+  padding-top: 200px;
+}
+
+// nav
 .tm-header-logo{
   padding: 30px 25px 45px;
   background: $block-secondary-background;
@@ -96,18 +132,6 @@ $slidenav-next-icon:         '›';
   box-sizing: border-box;
   padding: 15px 25px 20px;
   background: $block-secondary-background;
-}
-
-
-$pages: ( wood, colors, about-us, paints, metal, acrylic, acrylic-paint, acrylic-matt, emulsion, primer );
-
-@each $page in $pages {
-  .hero-#{$page} {
-    background-image:url("../img/pages/hero-#{$page}.jpg");
-    @if $page == "colors" {
-      background-position: 50% 8%;
-    }
-  }
 }
 
 

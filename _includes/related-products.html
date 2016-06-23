@@ -1,6 +1,10 @@
 <div class="uk-block">
-	<h3 class="uk-text-center">Δείτε επίσης στην κατηγορία:</h3>
-	<div data-uk-slideset="{default: 2, medium: 4, animation: 'scale', duration: 100}">
+	{% if page.url == "/products.html" %}
+		<h3 class="uk-text-center uk-margin-large-bottom uk-h2">Δημοφιλέστερα προϊόντα:</h3>
+	{% else %}
+		<h3 class="uk-text-center uk-margin-large-bottom">Δείτε επίσης στην κατηγορία:</h3>
+	{% endif %}
+	<div data-uk-slideset="{default: 2, medium: {{related-product-count}}, animation: 'scale', duration: 100}">
 		<div class="uk-slidenav-position">
 			<ul class="uk-grid uk-slideset">
 				{% for paint in related-product %}
