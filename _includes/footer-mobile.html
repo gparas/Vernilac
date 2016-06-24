@@ -1,50 +1,46 @@
-<footer class="uk-block uk-block-muted uk-visible-small">
-	<div class="uk-container uk-container-center">
-		<ul class="uk-nav uk-nav-parent-icon uk-link-muted" data-uk-nav="{multiple:true}">
-			<li class="uk-parent">
-				<a href="#" class="uk-text-bold">Quick Links</a>
-				<ul class="uk-nav-sub">
-					{% for item in site.data.menu.main-menu %}
-						<li><a href="{{ item.url | prepend: site.github.url }}">{{ item.text }}</a></li>
-					{% endfor %}
-				</ul>
-			</li>
-			<li class="uk-parent">
-				<a href="#" class="uk-text-bold">About us</a>
-				<ul class="uk-nav-sub">
-					{% for item in site.data.menu.secondary-menu %}
-						<li><a href="{{ item.url | prepend: site.github.url }}">{{ item.text }}</a></li>
-					{% endfor %}
-				</ul>
-			</li>
-			<li class="uk-parent">
-				<a href="#" class="uk-text-bold">Athens Store Locator</a>
-				<ul class="uk-nav-sub">
-					<li>
-						<address>
-							27 χλμ. Π.Ε.Ο. Αθηνών – Θηβών,<br/>
-							196 00 Μάνδρα, Αττικής<br/><br/>
-							Τηλ.: 210 55 56 691-2, 210 55 56 696-7<br/>
-							Fax: 210 55 56 610<br/>
-							e-mail: sales@vernilac.gr
-						</address>
-					</li>
-				</ul>
-			</li>
-			<li class="uk-parent">
-				<a href="#" class="uk-text-bold">Thessaloniki Store Locator</a>
-				<ul class="uk-nav-sub">
-					<li>
-						<address>
-							ΚΩΝΣΤΑΝΤΙΝΟΥΠΟΛΕΩΣ 12,<br/>
-							ΑΓΡ. ΠΕΡΙΟΧΗ ΔΙΑΒΑΤΩΝ,<br/>
-							ΘΕΣ/ΝΙΚΗ 546 28, Τ.Θ. 1538<br/><br/>
-							Τηλ.: 2310 789840-41, 2310 789831,<br/>
-							Fax: 2310 789849
-						</address>
-					</li>
-				</ul>
+<ul class="uk-nav uk-nav-parent-icon uk-link-muted uk-visible-small" data-uk-nav="{multiple:true}">
+	<li class="uk-parent">
+		<a href="#" class="uk-text-bold">Quick Links</a>
+		<ul class="uk-nav-sub">
+			{% for item in site.data.menu.main-menu %}
+				<li><a href="{{ item.url | prepend: site.github.url }}">{{ item.text }}</a></li>
+			{% endfor %}
+		</ul>
+	</li>
+	<li class="uk-parent">
+		<a href="#" class="uk-text-bold">About us</a>
+		<ul class="uk-nav-sub">
+			{% for item in site.data.menu.secondary-menu %}
+				<li><a href="{{ item.url | prepend: site.github.url }}">{{ item.text }}</a></li>
+			{% endfor %}
+		</ul>
+	</li>
+	<li class="uk-parent">
+		<a href="#" class="uk-text-bold">Athens Store Locator</a>
+		<ul class="uk-nav-sub">
+			<li>
+				<address>
+					27 χλμ. Π.Ε.Ο. Αθηνών – Θηβών,<br/>
+					196 00 Μάνδρα, Αττικής<br/><br/>
+					Τηλ.: 210 55 56 691-2, 210 55 56 696-7<br/>
+					Fax: 210 55 56 610<br/>
+					e-mail: sales@vernilac.gr
+				</address>
 			</li>
 		</ul>
-	</div>
-</footer>
+	</li>
+	<li class="uk-parent">
+		<a href="#" class="uk-text-bold">Thessaloniki Store Locator</a>
+		<ul class="uk-nav-sub">
+			<li>
+				<address>
+					ΚΩΝΣΤΑΝΤΙΝΟΥΠΟΛΕΩΣ 12,<br/>
+					ΑΓΡ. ΠΕΡΙΟΧΗ ΔΙΑΒΑΤΩΝ,<br/>
+					ΘΕΣ/ΝΙΚΗ 546 28, Τ.Θ. 1538<br/><br/>
+					Τηλ.: 2310 789840-41, 2310 789831,<br/>
+					Fax: 2310 789849
+				</address>
+			</li>
+		</ul>
+	</li>
+</ul>

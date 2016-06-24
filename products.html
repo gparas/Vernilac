@@ -5,32 +5,37 @@ header: Χρώματα ανά χρήση
 lead: Βρείτε το χρώμα που σας εμπνέει
 overlay: true
 ---
-<div class="uk-margin-large-bottom uk-width-medium-7-10 uk-align-center ">
+<div class="uk-width-large-3-4 uk-align-center uk-margin-large-bottom">
   <p class="uk-text-large uk-text-center">
     Κάθε σπίτι έχει το δικό του χρώμα, τη δική του αισθητική.
-    Το δικό σας σπίτι όμως το θέλετε να είναι μοναδικό, διαφορετικό, γεμάτο ζωντάνια. 
   </p>
 </div>
-<div class="uk-width-medium-3-4 uk-align-center uk-column-medium-1-2">
+<div class="uk-width-large-3-4 uk-align-center uk-column-medium-1-2">
   <p>
-     Θέλετε να έχει τα χρώματα που σας εμπνέουν, που σας κάνουν να ζείτε όμορφα, ξένοιαστα, να ταιριάζουν με το γούστο και την αισθητική σας. Σήμερα τα χρώματα μας έχουν νέα, μοναδικά χαρακτηριστικά. Είναι άοσμα, αντιαλλεργικά, οικολογικά, προστατεύουν όλους μας και το περιβάλλον, αντέχουν σε αντίξοες συνθήκες, διατίθενται σε χιλιάδες αποχρώσεις για όλων των τύπων τα γούστα και φέρουν σημαντικές πιστοποιήσεις.
-    Για εσωτερικές και εξωτερικές επιφάνειες. Όποια και αν είναι η επιλογή σας, η Berling έχει στη γκάμα χρωμάτων της όλων των ειδών τις αποχρώσεις και λύσεις που αφορούν σε κάθε δωμάτιο και χώρο της κατοικίας σας.
+    Το σπίτι σας θέλετε να είναι μοναδικό, διαφορετικό, γεμάτο ζωντάνια. Θέλετε να έχει τα χρώματα που σας εμπνέουν, που σας κάνουν να ζείτε όμορφα, ξένοιαστα, να ταιριάζουν με το γούστο και την αισθητική σας.
+  </p>
+  <p>
+    Σήμερα τα χρώματα μας έχουν νέα, μοναδικά χαρακτηριστικά. Είναι άοσμα, αντιαλλεργικά, οικολογικά, προστατεύουν όλους μας και το περιβάλλον, αντέχουν σε αντίξοες συνθήκες, διατίθενται σε χιλιάδες αποχρώσεις για όλων των τύπων τα γούστα και φέρουν σημαντικές πιστοποιήσεις.
+  </p>
+  <p>
+    Για εσωτερικές και εξωτερικές επιφάνειες. Όποια και αν είναι η επιλογή σας, η Vernilac έχει στη γκάμα χρωμάτων της όλων των ειδών τις αποχρώσεις και λύσεις που αφορούν σε κάθε δωμάτιο και χώρο της κατοικίας σας.
   </p>
 </div>
-<div class="uk-grid uk-grid-small uk-grid-width-medium-1-3 uk-grid-match uk-margin-large">
-  {% for cat in site.data.menu.product-menu %}
-  {% assign src = cat.url  | remove_first: "/" | replace: '.html', '' %}
-  <div class="uk-grid-margin">
-    <figure class="uk-overlay uk-overlay-hover">
-      <img class="uk-overlay-scale" src="img/pages/products/banner-{{ src }}.jpg">
-      <div class="uk-overlay-panel uk-overlay-background uk-overlay-bottom uk-ignore">
-        <h3>{{ cat.text }}</h3>
-        Βρείτε το χρώμα που σας εμπνέει
-      </div>
-      <a class="uk-position-cover" href="{{ cat.url | prepend: site.github.url }}"></a>
-    </figure>
+<div class="uk-width-large-3-4 uk-align-center">
+  <div class="uk-grid uk-grid-small uk-grid-width-medium-1-2 uk-grid-match uk-margin-large">
+    {% for cat in site.data.menu.product-menu %}
+    {% assign src = cat.url  | remove_first: "/" | replace: '.html', '' %}
+    <div class="uk-grid-margin">
+      <figure class="uk-overlay">
+        <img class="uk-overlay-scale" src="img/pages/products/banner-{{ src }}.jpg">
+        <div class="uk-overlay-panel uk-overlay-background uk-flex uk-flex-center uk-flex-middle uk-text-center">
+          <h3>{{ cat.text }}</h3>
+        </div>
+        <a class="uk-position-cover" href="{{ cat.url | prepend: site.github.url }}"></a>
+      </figure>
+    </div>
+    {% endfor %}
   </div>
-  {% endfor %}
 </div>
 
 {% assign related-product = site.data.paint.emulsion.data %}

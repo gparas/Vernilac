@@ -11,8 +11,11 @@ $base-body-color:            #666;
 $base-heading-color:         #333;
 $base-heading-font-weight:   500;
 
-$utility-container-large-max-width:            1260px;
-$utility-container-large-padding-horizontal:   40px;
+$utility-container-max-width:                  1200px;
+$utility-container-large-max-width:            1200px;
+
+$utility-container-padding-horizontal:         0;
+$utility-container-large-padding-horizontal:   30px;
 
 $navbar-background:          #fff;
 $navbar-nav-height:          55px;
@@ -86,11 +89,15 @@ $overlay-panel-background:   rgba(0,0,0,0.3);
 #tm-main,
 #tm-footer{
   &.uk-block{
-    @media (min-width: $breakpoint-medium){
-      padding-left: $block-padding-vertical-large;
-      padding-right: $block-padding-vertical-large;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    @media (min-width: 768px){
+      padding-left: 50px;
+      padding-right: 50px;
     }
-    @media (min-width: $breakpoint-large){
+
+    @media (min-width: 1200px){
       padding-left: $block-large-padding-vertical-large;
       padding-right: $block-large-padding-vertical-large;
     }
@@ -103,14 +110,26 @@ $overlay-panel-background:   rgba(0,0,0,0.3);
 #tm-nav{
   z-index: 4;
 
-  @media (min-width: $breakpoint-medium){
-    padding-left: $block-padding-vertical-large;
-    padding-right: $block-padding-vertical-large;
+  @media (min-width: 768px){
+    padding-left: 50px;
+    padding-right: 50px;
   }
-  @media (min-width: $breakpoint-large){
+
+  @media (min-width: 1200px){
     padding-left: $block-large-padding-vertical-large;
     padding-right: $block-large-padding-vertical-large;
   }
+}
+
+// tm-nav-mobile
+// --------------------------------------------------
+
+#tm-nav-mobile{
+  position: relative;
+  box-sizing: border-box;
+  padding: 15px 25px 20px;
+  background: $block-secondary-background;
+  z-index: 4;
 }
 
 // tm-header
@@ -127,13 +146,6 @@ $overlay-panel-background:   rgba(0,0,0,0.3);
   padding: 30px 25px 45px;
   background: $block-secondary-background;
 }
-
-.tm-site-header-mobile{
-  box-sizing: border-box;
-  padding: 15px 25px 20px;
-  background: $block-secondary-background;
-}
-
 
 .tm-toolbar{ 
   height: 40px;
