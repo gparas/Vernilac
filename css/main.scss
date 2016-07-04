@@ -1,6 +1,7 @@
 ---
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
+
 @charset "utf-8";
 
 // 
@@ -77,10 +78,8 @@ $overlay-panel-background:   rgba(0,0,0,0.3);
 //
 // Components
 // --------------------------------------------------
-
 @import "components/slidenav";
 @import "components/slideshow";
-
 
 // uk-block
 // --------------------------------------------------
@@ -135,10 +134,13 @@ $overlay-panel-background:   rgba(0,0,0,0.3);
 // tm-header
 // --------------------------------------------------
 
+#tm-hero{
+  height: 400px;
+}
+
 #tm-header-title{
   position: relative;
   z-index: 1;
-  padding-top: 200px;
 }
 
 // nav
