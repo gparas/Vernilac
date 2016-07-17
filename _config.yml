@@ -21,4 +21,10 @@ sass:
   style:            :compressed
 
 collections:
-  - colors
+  acrylics:
+    output: true
+  emulsions:
+    output: true
+  primers:
+  metals:
+  woods: 

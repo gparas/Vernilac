@@ -1,14 +1,16 @@
 ---
-layout: default
+layout: page
 ---
 
-{% assign paint = site.data.paint %}
-
-<div class="uk-grid uk-grid-divider">
-  <div class="uk-width-3-10 uk-hidden-small">
-    {% include products-sidebar.html %}
+<div id="tm-product-page" class="uk-grid">
+  <div class="uk-width-3-10">
+    <img class="uk-align-left" src="{{ page.image_path }}" alt="{{ page.title }}">
   </div>
-  <div class="uk-width-medium-7-10 uk-width-1-1">
-    {{ content }}
+  <div class="uk-width-7-10">
+    <h2>{{ page.title }}</h2>
+    <p class="uk-margin-large-bottom">{{ page.description }}</p>
   </div>
+</div>
+<div class="uk-panel uk-panel-box">
+  {{ content }}
 </div>

@@ -1,0 +1,31 @@
+---
+layout: page
+title: Για Εξωτερικούς Χώρους
+lead: Χρώματα για εξωτερικούς χώρους κορυφαίας ποιότητας
+type: Ακρυλικά χρώματα
+bg_image: /img/pages/hero-acrylics.jpg
+---
+
+{% assign products = site.acrylics | sort:"order" %}
+
+{% for product in products %}
+
+  {% capture modulo %}{{ forloop.index0 | mod:2 }}{% endcapture %}
+
+  {% if modulo == '0' or forloop.first %}
+  <div class="uk-grid tm-collection-grid" data-uk-grid-margin>
+    {% endif %}
+    <div class="uk-width-1-2">
+      <a href="{{ product.url }}" class="uk-clearfix uk-link-muted">
+        <img class="uk-align-left" src="{{ product.image_path }}" alt="{{ product.title }}">
+        <div>
+          <h4>{{ product.title }}</h4>
+          <p class="uk-text-small">{{ product.lead }}</p>
+        </div>
+      </a>
+    </div>
+    {% if modulo == '1' or forloop.last %}
+  </div>
+  {% endif %}
+
+{% endfor %}

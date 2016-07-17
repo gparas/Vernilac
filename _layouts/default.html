@@ -4,43 +4,45 @@
 {% include head.html %}
 
 <body>
-	
-	<div id="tm-wrapper" class="uk-container uk-container-center">
-		<div id="tm-header" class="uk-position-relative">
-			{% include site_nav_mobile.html %}
-			{% include site_nav.html %}
-			{% if page.title == 'Home' %}
-				{% include home-slideshow.html %}
-				{% else %}
-				<div id="tm-bg" class="uk-cover-background" style="background-image:url('img/pages/hero-{{page.title | downcase  | replace: ' ', '-'}}.jpg');"></div>
-				<div id="tm-hero" class="uk-block uk-block-secondary uk-flex uk-flex-middle">
-					<div id="tm-header-title" class="uk-contrast uk-width-1-1">
-						<h1>{{ page.header }}</h1>
-	  					<p class="uk-text-large">{{page.lead}}</p>
-					</div>
-				</div>
-			{% endif %}
-			{% if page.overlay == true %}
-				<div class="uk-overlay-panel uk-overlay-background"></div>
-			{% endif %}
-		</div>
-		{% comment %}
-		<div id="tm-top" class="uk-block uk-block-muted">
-			tm-top
-		</div>
-		{% endcomment %}
-		<div id="tm-main" class="uk-block uk-block-default">
-			{{ content }}
-		</div>
-		<div id="tm-footer" class="uk-block uk-block-secondary uk-contrast">
-			{% include footer.html %}
-			{% include footer-mobile.html %}
-		</div>
-	
-	</div>
+
+  <div id="tm-wrapper">
+    <div id="tm-header" class="uk-position-relative">
+      {% include site_nav_mobile.html %}
+      {% include site_nav.html %}
+      {% if page.title == 'Home' %}
+      {% include home-slideshow.html %}
+      {% else %}
+      <div id="tm-hero" 
+        class="uk-block uk-block-secondary uk-cover-background uk-flex uk-flex-middle"
+        style="background-image:url('{{page.bg_image}}');"
+      >
+      <div id="tm-header-title" class="uk-contrast uk-width-1-1">
+        <h1>{{ page.title }}</h1>
+        <p class="uk-text-large">{{page.lead}}</p>
+      </div>
+    </div>
+    {% endif %}
+    {% if page.overlay == true %}
+    <div class="uk-overlay-panel uk-overlay-background"></div>
+    {% endif %}
+  </div>
+  {% comment %}
+  <div id="tm-top" class="uk-block uk-block-muted">
+    tm-top
+  </div>
+  {% endcomment %}
+  <div id="tm-main" class="uk-block">
+    {{ content }}
+  </div>
+  <div id="tm-footer" class="uk-block uk-block-secondary uk-contrast">
+    {% include footer.html %}
+    {% include footer-mobile.html %}
+  </div>
+
+</div>
 
 
-	{% include javascripts.html %}
+{% include javascripts.html %}
 
 </body>
 

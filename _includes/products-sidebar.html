@@ -1,8 +1,14 @@
-<ul class="uk-nav uk-nav-side">
-  <li class="uk-nav-header">Προϊοντα</li>
-  {% for item in site.data.menu.product-menu %}
-    <li {% if item.url == page.url %}class="uk-active"{% endif %} >
-    	<a href="{{ item.url | prepend: site.github.url }}">{{ item.text }}</a>
-	</li>
-  {% endfor %}
-</ul>
+<div class="panel">
+  <div class="panel-heading">
+    <h3 class="panel-title">Προϊοντα</h3>
+  </div>
+  <div class="panel-body-menu">
+    <ul class="uk-nav uk-nav-side">
+      {% for item in site.data.menu.product-menu %}
+      <li {% if item.url == page.url %}class="uk-active"{% endif %} >
+        <a href="{{ item.url | prepend: site.github.url }}">{{ item.text }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

@@ -14,7 +14,7 @@
          "submenu": [
             {
                "text": "Εξωτερικούς Χώρους",
-               "url": "/acrylic.html"
+               "url": "/acrylics.html"
             },
             {
                "text": "Εσωτερικούς Χώρους",
@@ -60,11 +60,11 @@
    "product-menu": [
       {
          "text": "Εξωτερικούς Χώρους",
-         "url": "/acrylic.html"
+         "url": "/acrylics.html"
       },
       {
          "text": "Εσωτερικούς Χώρους",
-         "url": "/emulsion.html"
+         "url": "/emulsions.html"
       },
       {
          "text": "Υποστρώματα – Αστάρια τοίχων",

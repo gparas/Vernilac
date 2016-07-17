@@ -8,8 +8,8 @@
 // Custom Variables
 // --------------------------------------------------
 $base-body-background:       #E4E4E4;
-$base-body-color:            #666;
-$base-heading-color:         #333;
+$base-body-color:            #4b4b4b;
+$base-heading-color:         #4b4b4b;
 $base-heading-font-weight:   500;
 
 $utility-container-max-width:                  1200px;
@@ -30,6 +30,39 @@ $slidenav-next-icon:         '›';
 
 $overlay-panel-background:   rgba(0,0,0,0.3);
 
+$article-title-font-size:    30px;
+$article-title-line-height:  36px;
+
+//
+// Mixins
+// --------------------------------------------------
+
+// Border-radius
+
+@mixin border-top-radius($radius) {
+  border-top-right-radius: $radius;
+  border-top-left-radius: $radius;
+}
+@mixin border-right-radius($radius) {
+  border-bottom-right-radius: $radius;
+  border-top-right-radius: $radius;
+}
+@mixin border-bottom-radius($radius) {
+  border-bottom-right-radius: $radius;
+  border-bottom-left-radius: $radius;
+}
+@mixin border-left-radius($radius) {
+  border-bottom-left-radius: $radius;
+  border-top-left-radius: $radius;
+}
+
+
+// Drop shadows
+
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow;
+          box-shadow: $shadow;
+}
 
 //
 // Core
@@ -44,8 +77,8 @@ $overlay-panel-background:   rgba(0,0,0,0.3);
 
 // Layout
 @import "core/grid";
-@import "core/panel";
 @import "core/block";
+@import "core/panel";
 @import "core/article";
 @import "core/cover";
 
@@ -82,6 +115,7 @@ $overlay-panel-background:   rgba(0,0,0,0.3);
 @import "components/slidenav";
 @import "components/slideshow";
 
+
 html{
   background:#2A2B2B url("http://yootheme.com/demo/themes/joomla/2011/bigeasy/templates/yoo_bigeasy/images/background/dust_bg.jpg") repeat fixed;
   background-repeat: repeat;
@@ -91,11 +125,17 @@ body{
   background: url('http://yootheme.com/demo/themes/joomla/2011/bigeasy/templates/yoo_bigeasy/images/background/dust_img.jpg') 50% 0 no-repeat fixed; 
 }
 
+table{
+  @extend .uk-table;
+}
 // uk-block
 // --------------------------------------------------
 
 #tm-wrapper{
   position: relative;
+  max-width: 1170px;
+  margin: 0 auto;
+  background: #fff;
 }
 
 #tm-bg{
@@ -132,14 +172,18 @@ body{
     }
 
     @media (min-width: 1200px){
-      padding-left: $block-large-padding-vertical-large;
-      padding-right: $block-large-padding-vertical-large;
+      padding-left: 120px;
+      padding-right: 120px;
     }
   }
 }
 
 #tm-hero{
-  height: 400px;
+  height: 660px;
+}
+
+#tm-main{
+  // margin-top: -100px;
 }
 
 // tm-nav
@@ -176,6 +220,10 @@ body{
 #tm-header-title{
   position: relative;
   z-index: 1;
+
+  h1{
+    font-size: 40px;
+  }
 }
 
 // nav
@@ -244,6 +292,26 @@ body{
   }
 }
 
+// Collections
+// --------------------------------------------------
+
+.tm-collection-grid{
+  img{
+    width: 100px;
+  }
+
+  a:hover{
+    text-decoration: none;
+  }
+
+  h4{
+    margin-bottom: 0;
+    color: #A69B87;
+    text-transform: uppercase;
+  }
+  p { margin: 0; }
+}
+
 // Products
 // --------------------------------------------------
 
@@ -306,4 +374,73 @@ $colors: (
     padding-left: 0;
     padding-right: 0;
   }
+}
+
+
+//
+// Panels
+// --------------------------------------------------
+
+$panel-bg:               #fff;
+$panel-border:           #ddd;
+$panel-border-radius:    4px;
+$panel-body-padding:     15px;
+$panel-heading-padding:  10px 15px;
+$panel-footer-padding:   $panel-heading-padding;
+$panel-heading-bg:       #f5f5f5;
+$panel-footer-bg:        $panel-heading-bg;
+
+
+// Base class
+.panel {
+  margin-bottom: 20px;
+  background-color: $panel-bg;
+  border: 1px solid $panel-border;
+  border-radius: $panel-border-radius;
+  @include box-shadow(0 1px 1px rgba(0,0,0,.05));
+}
+
+// Panel contents
+.panel-body {
+  padding: $panel-body-padding;
+}
+
+.panel-body-menu {
+  padding: 10px 0;
+}
+
+// Optional heading
+.panel-heading {
+  background: $panel-heading-bg;
+  padding: $panel-heading-padding;
+  border-bottom: 1px solid $panel-border;
+  @include border-top-radius(($panel-border-radius - 1));
+
+  > .dropdown .dropdown-toggle {
+    color: inherit;
+  }
+}
+
+// Within heading, strip any `h*` tag of its default margins for spacing.
+.panel-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 18px;
+  color: inherit;
+
+  > a,
+  > small,
+  > .small,
+  > small > a,
+  > .small > a {
+    color: inherit;
+  }
+}
+
+// Optional footer (stays gray in every modifier class)
+.panel-footer {
+  padding: $panel-footer-padding;
+  background-color: $panel-footer-bg;
+  border-top: 1px solid $panel-border;
+  @include border-bottom-radius(($panel-border-radius - 1));
 }

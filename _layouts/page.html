@@ -2,9 +2,15 @@
 layout: default
 ---
 
-<article class="uk-article">
-  <h1 class="uk-article-title">{{ page.header }}</h1>
-  <p class="uk-article-lead">{{page.lead}}</p>
-  <hr class="uk-article-divider" />
-  {{ content }}
-</article>
+<div class="uk-grid">
+  <div class="uk-width-3-4">
+    {% if page.type != null %}
+    <h2 class="uk-article-title">{{ page.type }}</h2>
+    <hr class="uk-article-divider">
+    {% endif %}
+    {{ content }}
+  </div>
+  <div class="uk-width-1-4">
+    {% include products-sidebar.html %}
+  </div>
+</div>
