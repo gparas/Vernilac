@@ -14,7 +14,7 @@
       {% else %}
       <div id="tm-hero" 
         class="uk-block uk-block-secondary uk-cover-background uk-flex uk-flex-middle"
-        style="background-image:url('{{page.bg_image}}');"
+        style="background-image:url('{{page.bg_image | prepend: site.github.url}}');"
       >
       <div id="tm-header-title" class="uk-contrast uk-width-1-1">
         <h1>{{ page.title }}</h1>
