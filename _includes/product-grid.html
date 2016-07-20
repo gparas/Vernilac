@@ -1,10 +1,5 @@
-{% for product in products %}
-
-  {% capture modulo %}{{ forloop.index0 | mod:2 }}{% endcapture %}
-
-  {% if modulo == '0' or forloop.first %}
-  <div class="uk-grid tm-collection-grid" data-uk-grid-margin>
-    {% endif %}
+<div class="uk-grid tm-collection-grid" data-uk-grid-margin>
+  {% for product in products %}
     <div class="uk-width-1-2">
       <a href="{{ product.url }}" class="uk-clearfix uk-link-muted">
         <img class="uk-align-left" src="{{ product.image_path | prepend: site.github.url }}" alt="{{ product.title }}">
@@ -14,8 +9,5 @@
         </div>
       </a>
     </div>
-    {% if modulo == '1' or forloop.last %}
-  </div>
-  {% endif %}
-
-{% endfor %}
+  {% endfor %}
+</div>
