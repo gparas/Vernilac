@@ -1,7 +1,7 @@
 <div class="uk-grid tm-collection-grid" data-uk-grid-margin>
   {% for product in products %}
     <div class="uk-width-1-2">
-      <a href="{{ product.url }}" class="uk-clearfix uk-link-muted">
+      <a href="{{ product.url | prepend: site.github.url }}" class="uk-clearfix uk-link-muted">
         <img class="uk-align-left" src="{{ product.image_path | prepend: site.github.url }}" alt="{{ product.title }}">
         <div>
           <h4>{{ product.title }}</h4>

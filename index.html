@@ -8,7 +8,7 @@ title: Home
 		{% assign src = cat.url  | remove_first: "/" | replace: '.html', '' %}
 		<div class="uk-width-medium-1-2 uk-grid-margin">
 			<figure class="uk-overlay uk-overlay-hover">
-				<img class="uk-overlay-scale" src="img/home/banner-{{ src }}.jpg">
+				<img class="uk-overlay-scale" src="{{ site.github.url }}/img/home/banner-{{ src }}.jpg">
 				<div class="uk-overlay-panel uk-overlay-background uk-overlay-bottom uk-ignore">
 					<h3>{{ cat.text }}</h3>
 					{% if cat.text == "Έμπνευση" %}
