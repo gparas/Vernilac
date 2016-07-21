@@ -11,10 +11,6 @@ layout: page
     <p class="uk-margin-large-bottom">{{ page.description }}</p>
   </div>
 </div>
-<div class="uk-panel uk-panel-box">
-  {{ content }}
-</div>
 
-{% assign category = page.category %}
-{% assign related-products = site.category %}
-{% include related-products.html %}
+
+{{ content }}

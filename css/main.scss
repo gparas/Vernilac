@@ -7,10 +7,16 @@
 // 
 // Custom Variables
 // --------------------------------------------------
-$base-body-background:       #E4E4E4;
-$base-body-color:            #4b4b4b;
+$brand-primary:              #a98970;
+
+$base-body-font-size:        13px;
+
+$base-body-background:       linear-gradient(135deg, #4a4b4e 0%, #222224 100%) 0px 0px fixed;
+$base-body-color:            #444444;
 $base-heading-color:         #4b4b4b;
 $base-heading-font-weight:   500;
+
+$base-link-color:            $brand-primary;
 
 $utility-container-max-width:                  1200px;
 $utility-container-large-max-width:            1200px;
@@ -22,8 +28,11 @@ $navbar-background:          #fff;
 $navbar-nav-height:          55px;
 $navbar-nav-font-size:       15px;
 
+$nav-side-active-background:  #cbb18c;
+$nav-navbar-hover-background: #cbb18c;
+
 $block-muted-background:     #f2f2f2;
-$block-secondary-background: #1A1A1C;
+$block-secondary-background: #2a2a2c;
 
 $slidenav-previous-icon:     '‹';
 $slidenav-next-icon:         '›';
@@ -117,11 +126,11 @@ $article-title-line-height:  36px;
 
 
 html{
-  background:#373434 url('{{site.github.url}}/img/chalkboard.jpg') 50% 0 repeat;
+  // background:#373434 url('{{site.github.url}}/img/chalkboard.jpg') 50% 0 repeat;
 }
 
 body{
-  background: url('{{site.github.url}}/img/chalkboard_bg.jpg') 50% 0 no-repeat; 
+  // background: url('{{site.github.url}}/img/chalkboard_bg.jpg') 50% 0 no-repeat; 
 }
 
 table{
@@ -133,8 +142,8 @@ table{
 #tm-wrapper{
   position: relative;
   max-width: 1170px;
-  margin: 0 auto;
-  background: #fff;
+  margin: 20px auto;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 6px 12px rgba(0, 0, 0, 0.12);
 }
 
 #tm-bg{
@@ -181,15 +190,21 @@ table{
   height: 480px;
 }
 
+#tm-footer{
+  color: #9e9895;
+}
+
 #tm-main{
-  // margin-top: -100px;
+  background: #fff;
 }
 
 // tm-nav
 // --------------------------------------------------
 
-#tm-nav{
+#tm-nav-wrapper{
   z-index: 4;
+  top: 20px;
+  width: 930px;
 
   @media (min-width: 768px){
     padding-left: 50px;
@@ -228,15 +243,15 @@ table{
 // nav
 .tm-header-logo{
   padding: 30px 25px 45px;
-  background: $block-secondary-background;
+  background: #1a1a1a;
 }
 
 .tm-toolbar{ 
   height: 40px;
-  background: -webkit-linear-gradient(90deg, rgba($block-secondary-background, .6), transparent);
-  background: -o-linear-gradient(90deg, rgba($block-secondary-background, .6), transparent);
-  background: -moz-linear-gradient(90deg, rgba($block-secondary-background, .6), transparent);
-  background: linear-gradient(90deg, rgba($block-secondary-background, .6), transparent);
+  // background: -webkit-linear-gradient(90deg, rgba($block-secondary-background, .6), transparent);
+  // background: -o-linear-gradient(90deg, rgba($block-secondary-background, .6), transparent);
+  // background: -moz-linear-gradient(90deg, rgba($block-secondary-background, .6), transparent);
+  // background: linear-gradient(90deg, rgba($block-secondary-background, .6), transparent);
 
   a{
     color: #fff;
@@ -305,7 +320,7 @@ table{
 
   h4{
     margin-bottom: 0;
-    color: #A69B87;
+    color: $brand-primary;
     text-transform: uppercase;
   }
   p { margin: 0; }

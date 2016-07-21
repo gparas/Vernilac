@@ -10,7 +10,7 @@
       },
       {
          "text": "Προϊόντα",
-         "url": "/emulsions.html",
+         "url": "/products.html",
          "submenu": [
             {
                "text": "Εξωτερικούς Χώρους",
@@ -18,7 +18,7 @@
             },
             {
                "text": "Εσωτερικούς Χώρους",
-               "url": "/emulsion.html"
+               "url": "/emulsions.html"
             },
             {
                "text": "Υποστρώματα – Αστάρια τοίχων",
