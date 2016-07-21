@@ -26,5 +26,10 @@ collections:
   emulsions:
     output: true
   primers:
-  metals:
-  woods: 
+    output: true
+  woods:
+    output: true
+  wood-primers:
+    output: true
+  metals: 
+    output: true

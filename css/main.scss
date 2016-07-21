@@ -117,12 +117,11 @@ $article-title-line-height:  36px;
 
 
 html{
-  background:#2A2B2B url("http://yootheme.com/demo/themes/joomla/2011/bigeasy/templates/yoo_bigeasy/images/background/dust_bg.jpg") repeat fixed;
-  background-repeat: repeat;
+  background:#373434 url('{{site.github.url}}/img/chalkboard.jpg') 50% 0 repeat;
 }
 
 body{
-  background: url('http://yootheme.com/demo/themes/joomla/2011/bigeasy/templates/yoo_bigeasy/images/background/dust_img.jpg') 50% 0 no-repeat fixed; 
+  background: url('{{site.github.url}}/img/chalkboard_bg.jpg') 50% 0 no-repeat; 
 }
 
 table{

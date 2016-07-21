@@ -1,0 +1,15 @@
+---
+layout: page
+title: Για Μεταλλικές Επιφάνειες
+lead: Βερνικοχρώματα - αστάρια βερνικοχρωμάτων κορυφαίας ποιότητας
+type: Βερνικοχρώματα
+bg_image: /img/pages/hero-metal.jpg
+---
+
+{% assign products = site.metals | sort:"order" %}
+{% include product-grid.html %}
+
+<h2 class="uk-article-title">Ασταρια Βερνικοχρωματων</h2>
+<hr class="uk-article-divider">
+{% assign products = site.wood-primers %}
+{% include product-grid.html %}
