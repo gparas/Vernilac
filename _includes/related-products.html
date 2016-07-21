@@ -7,12 +7,12 @@
 	<div data-uk-slideset="{default: 2, medium: {{related-product-count}}, animation: 'scale', duration: 100}">
 		<div class="uk-slidenav-position">
 			<ul class="uk-grid uk-slideset">
-				{% for paint in related-product %}
+				{% for product in related-products %}
 					<div>
-						<a class="uk-display-block" href="{{ paint.url | prepend: site.github.url }}">
-							<img src="img/products/{{ paint.thumbnail }}" alt="{{ paint.title }} {% if subtitle %}{{ subtitle }}{% endif %}">
+						<a class="uk-display-block" href="{{ product.url | prepend: site.github.url }}"">
+							<img src="{{ product.image_path | prepend: site.github.url }}" alt="{{ product.title }}">
 						</a>
-						<p class="uk-text-center uk-text-bold">{{ paint.title }}</p>
+						<p class="uk-text-center uk-text-bold">{{{ product.title }}</p>
 					</div>
 				{% endfor %}
 			</ul>

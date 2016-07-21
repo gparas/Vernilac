@@ -33,3 +33,5 @@ collections:
     output: true
   metals: 
     output: true
+  metal-primers: 
+    output: true

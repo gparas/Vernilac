@@ -14,3 +14,7 @@ layout: page
 <div class="uk-panel uk-panel-box">
   {{ content }}
 </div>
+
+{% assign category = page.category %}
+{% assign related-products = site.category %}
+{% include related-products.html %}
