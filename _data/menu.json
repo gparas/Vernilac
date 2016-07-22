@@ -13,6 +13,10 @@
          "url": "/products.html",
          "submenu": [
             {
+               "text": "<img src='/img/menu/img_products.jpg'>",
+               "url": "/products.html"
+            },
+            {
                "text": "Εξωτερικούς Χώρους",
                "url": "/acrylics.html"
             },

@@ -1,5 +1,5 @@
-<div id="tm-nav-wrapper" class="uk-visible-large uk-position-topx">
-  <div id="tm-nav" class="uk-flex uk-flex-bottom">
+<div id="tm-nav" class="uk-visible-large uk-position-top">
+  <div class="uk-flex uk-flex-bottom">
     <a class="tm-header-logo" href="{{ site.github.url }}/"><img src="{{ site.github.url }}/img/logo.svg" width="240"></a>
     <div class="uk-width-3-4">
       <div class="tm-toolbar">
@@ -15,26 +15,14 @@
         <ul class="uk-navbar-nav">
           {% for item in site.data.menu.main-menu %}
             {% if item.submenu != null %}
-            <li class="uk-parent {% if item.url == page.url %}uk-active{% endif %}" data-uk-dropdown="{justify:'#tm-nav'}" >
+            <li class="uk-parent {% if item.url == page.url %}uk-active{% endif %}" data-uk-dropdown >
               <a href="{{ item.url | prepend: site.github.url }}">{{ item.text }}</a>
-              <div class="uk-dropdown-navbar uk-dropdown uk-dropdown-width-3">
-                <div class="uk-grid uk-dropdown-grid">
-                  <div class="uk-width-1-3">
-                    <img src="/img/menu/img_products.jpg">
-                  </div>
+              <div class="uk-hidden">
+                <ul class="uk-nav uk-nav-navbar">
                   {% for subitem in item.submenu %}
-                  {% capture modulo %}{{ forloop.index0 | mod:3 }}{% endcapture %}
-                  {% if modulo == '0' or forloop.first %}
-                    <div class="uk-width-1-3">
-                      <ul class="uk-nav uk-nav-navbar">
-                      {% endif %}
-                        <li><a href="{{ subitem.url | prepend: site.github.url }}">{{ subitem.text }}</a></li>
-                      {% if modulo == '2' or forloop.last %}
-                      </ul>
-                    </div>
-                    {% endif %}
+                  <li><a href="{{ subitem.url | prepend: site.github.url }}">{{ subitem.text }}</a></li>
                   {% endfor %}
-                </div>
+                </ul>
               </div>
             </li>
             {% else %}

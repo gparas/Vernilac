@@ -201,10 +201,8 @@ table{
 // tm-nav
 // --------------------------------------------------
 
-#tm-nav-wrapper{
+#tm-nav{
   z-index: 4;
-  top: 20px;
-  width: 930px;
 
   @media (min-width: 768px){
     padding-left: 50px;
@@ -216,6 +214,7 @@ table{
     padding-right: $block-large-padding-vertical-large;
   }
 }
+
 
 // tm-nav-mobile
 // --------------------------------------------------

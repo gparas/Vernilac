@@ -1,14 +1,20 @@
-<div class="panel">
-  <div class="panel-heading">
-    <h3 class="panel-title">Προϊοντα</h3>
+{% for section in site.data.nav %}
+  <div class="panel">
+    <div class="panel-heading">
+      <h3 class="panel-title">
+        {{ section.title }}
+      </h3>
+    </div>
+    <div class="panel-body-menu">
+      <ul class="uk-nav uk-nav-side">
+        {% for item in section.items %}
+          {% assign item_url = item | prepend: site.github.url | append:".html" %}
+          {% assign title = item | replace: 'colors', 'Χρώματα' | replace: 'inspiration', 'Έμπνευση' | replace: 'products', 'Προϊόντα' | replace: 'acrylics', 'Εξωτερικούς Χώρους' | replace: 'emulsions', 'Εσωτερικούς Χώρους' | replace: 'primers', 'Υποστρώματα – Αστάρια τοίχων' | replace: 'woods', 'Ξύλινες Επιφάνειες' | replace: 'metals', 'Μεταλλικές Επιφάνειες' %}
+          <li class="{% if item_url == page.url %}uk-active{% endif %}">
+            <a href="{{ item_url }}">{{ title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
   </div>
-  <div class="panel-body-menu">
-    <ul class="uk-nav uk-nav-side">
-      {% for item in site.data.menu.product-menu %}
-      <li {% if item.url == page.url %}class="uk-active"{% endif %} >
-        <a href="{{ item.url | prepend: site.github.url }}">{{ item.text }}</a>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-</div>
+{% endfor %}
