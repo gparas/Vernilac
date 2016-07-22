@@ -15,6 +15,11 @@ exclude:
   - bower_components
   - bower.json
   - README.md
+  - Gemfile
+  - Gemfile.lock
+
+gems:
+  - modulo.filter
 
 sass:
   sass_dir:          bower_components/uikit/scss
