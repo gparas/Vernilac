@@ -16,4 +16,5 @@ order: 2
 
 
 {% assign related-products = site.acrylics %}
+{% assign current_product = 'Acrylic Paint Elastic' %}
 {% include related-products.html %}

@@ -4,16 +4,18 @@
 	{% else %}
 		<h3 class="uk-text-center uk-margin-large-bottom">Δείτε επίσης στην κατηγορία:</h3>
 	{% endif %}
-	<div data-uk-slideset="{default: 2, medium: 4, animation: 'scale', duration: 100}">
+	<div data-uk-slideset="{default: 2, medium: 5, animation: 'scale', duration: 100}">
 		<div class="uk-slidenav-position">
 			<ul class="uk-grid uk-slideset">
 				{% for product in related-products %}
+					{% unless product.title == current_product %}
 					<div>
 						<a class="uk-display-block" href="{{ product.url | prepend: site.github.url }}">
 							<img src="{{ product.image_path | prepend: site.github.url }}" alt="{{ product.title }}">
 						</a>
 						<p class="uk-text-center uk-text-bold">{{ product.title }}</p>
 					</div>
+					{% endunless %}
 				{% endfor %}
 			</ul>
 			<a href="#" class="uk-slidenav uk-slidenav-previous" data-uk-slideset-item="previous"></a>

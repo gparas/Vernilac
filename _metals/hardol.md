@@ -7,3 +7,7 @@ image_path: /img/products/enamel-5.jpg
 bg_image: /img/pages/hero-metal.jpg
 order: 5
 ---
+
+{% assign related-products = site.metals %}
+{% assign current_product = 'Hardol' %}
+{% include related-products.html %}
