@@ -1,26 +1,269 @@
----
-layout: default
-title: Home
----
+<!DOCTYPE html>
+<html>
 
-<div class="uk-grid uk-grid-small">
-	{% for cat in site.data.menu.main-menu %}
-		{% assign src = cat.url  | remove_first: "/" | replace: '.html', '' %}
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Home</title>
+  <meta name="description" content="VERNILAC S.A. is one of the largest producers of paints & varnishes in GREECE and its trademark is identified with high quality products.
+">
+
+  <link rel="shortcut icon" type="image/png" href="favicon.png" />
+
+  <link rel="stylesheet" href="/vernilac//css/main.css">
+  <link rel="canonical" href="/vernilac//vernilac//">
+  <link rel="alternate" type="application/rss+xml" title="Vernilac - Think Differently" href="/vernilac//vernilac//feed.xml" />
+</head>
+
+
+<body>
+
+  <div id="tm-wrapper">
+    <div id="tm-header" class="uk-position-relative">
+      <div id="tm-nav-mobile" class="uk-hidden-large">
+    <div class="uk-flex uk-flex-middle uk-flex-space-between">
+      <a href="/"><img src="/img/logo.svg" width="240"></a>
+      <a href="#my-id" data-uk-offcanvas>open</a>
+    </div>
+</div>
+
+<div id="my-id" class="uk-offcanvas">
+    <div class="uk-offcanvas-bar uk-offcanvas-bar-flip">
+        <ul class="uk-nav uk-nav-offcanvas" data-uk-nav>
+          
+            
+            <li  >
+              <a href="/colors.html">Χρώματα</a>
+            </li>
+            
+          
+            
+            <li  >
+              <a href="/inspiration.html">Έμπνευση</a>
+            </li>
+            
+          
+            
+            <li class="uk-parent " data-uk-dropdown >
+              <a href="/products.html">Προϊόντα</a>
+              <ul class="uk-nav-sub">
+                
+                <li><a href="/products.html"><img src='/img/menu/img_products.jpg'></a></li>
+                
+                <li><a href="/acrylics.html">Εξωτερικούς Χώρους</a></li>
+                
+                <li><a href="/emulsions.html">Εσωτερικούς Χώρους</a></li>
+                
+                <li><a href="/primers.html">Υποστρώματα – Αστάρια τοίχων</a></li>
+                
+                <li><a href="/woods.html">Ξύλινες Επιφάνειες</a></li>
+                
+                <li><a href="/metals.html">Μεταλλικές Επιφάνειες</a></li>
+                
+              </ul>
+            </li>
+            
+          
+            
+            <li  >
+              <a href="/tips.html">Tips</a>
+            </li>
+            
+          
+
+          
+            <li><a href="/about-us.html">Η εταιρεία</a></li>
+          
+            <li><a href="/">Επικοινωνία</a></li>
+          
+            <li><a href="/">Πολιτική απορρήτου</a></li>
+          
+            <li><a href="/">Όροι και προϋποθέσεις</a></li>
+          
+        </ul>
+    </div>
+</div>
+      <div id="tm-nav" class="uk-visible-large uk-position-top">
+  <div class="uk-flex uk-flex-bottom">
+    <a class="tm-header-logo" href="/vernilac//"><img src="/vernilac//img/logo.svg" width="240"></a>
+    <div class="uk-width-3-4">
+      <div class="tm-toolbar">
+        <ul class="uk-subnav uk-subnav-line uk-margin-remove">
+          
+            
+            <li><a href="/vernilac//about-us.html">Η εταιρεία</a></li>
+            
+          
+            
+            <li><a href="/vernilac//">Επικοινωνία</a></li>
+            
+          
+            
+          
+            
+          
+        </ul>
+      </div>
+      <nav class="uk-navbar">
+        <ul class="uk-navbar-nav">
+          
+            
+            <li class="uk-parent ">
+              <a href="/vernilac//colors.html">Χρώματα</a>
+            </li>
+            
+          
+            
+            <li class="uk-parent ">
+              <a href="/vernilac//inspiration.html">Έμπνευση</a>
+            </li>
+            
+          
+            
+            <li class="uk-parent " data-uk-dropdown="{justify:'#tm-nav'}" >
+              <a href="/vernilac//products.html">Προϊόντα</a>
+              <div class="uk-dropdown uk-dropdown-width-4 uk-dropdown-navbar">
+                <div class="uk-grid uk-dropdown-grid">
+                  <div class="uk-width-1-4">
+                    <img src="/img/menu/img_products.jpg">
+                  </div>
+                  
+                    
+                    
+                    <div class="uk-width-1-4">
+                      <ul class="uk-nav uk-nav-navbar">
+                      
+                        <li><a href="/vernilac//acrylics.html">Εξωτερικούς Χώρους</a></li>
+                      
+                  
+                    
+                    
+                        <li><a href="/vernilac//emulsions.html">Εσωτερικούς Χώρους</a></li>
+                      
+                      </ul>
+                    </div>
+                    
+                  
+                    
+                    
+                    <div class="uk-width-1-4">
+                      <ul class="uk-nav uk-nav-navbar">
+                      
+                        <li><a href="/vernilac//primers.html">Υποστρώματα – Αστάρια τοίχων</a></li>
+                      
+                  
+                    
+                    
+                        <li><a href="/vernilac//woods.html">Ξύλινες Επιφάνειες</a></li>
+                      
+                      </ul>
+                    </div>
+                    
+                  
+                    
+                    
+                    <div class="uk-width-1-4">
+                      <ul class="uk-nav uk-nav-navbar">
+                      
+                        <li><a href="/vernilac//metals.html">Μεταλλικές Επιφάνειες</a></li>
+                      
+                      </ul>
+                    </div>
+                    
+                  
+                </div>
+              </div>
+            </li>
+            
+          
+            
+            <li class="uk-parent ">
+              <a href="/vernilac//tips.html">Tips</a>
+            </li>
+            
+          
+        </ul>
+        <div class="uk-navbar-flip uk-navbar-content">
+          <img src="/vernilac//img/vernilac.jpg" width="50"></a>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
+      
+      <div id="tm-slideshow" class="tm-gradient uk-slidenav-position" data-uk-slideshow="{autoplay:true, animation: 'scroll'}">
+	<ul class="uk-slideshow">
+	    <li><img src="/vernilac//img/home/slideshow-1a.jpg"></li>
+	    <li><img src="/vernilac//img/home/slideshow-2a.jpg"></li>
+	</ul>
+	<a href="#" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous" data-uk-slideshow-item="previous"></a>
+    <a href="#" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" data-uk-slideshow-item="next"></a>
+</div>
+      
+    
+  </div>
+  
+  <div id="tm-main" class="uk-block">
+    <div class="uk-grid uk-grid-small">
+	
+		
 		<div class="uk-width-medium-1-2 uk-grid-margin">
 			<figure class="uk-overlay uk-overlay-hover">
-				<img class="uk-overlay-scale" src="{{ site.baseurl }}/img/home/banner-{{ src }}.jpg">
+				<img class="uk-overlay-scale" src="/vernilac//img/home/banner-colors.jpg">
 				<div class="uk-overlay-panel uk-overlay-background uk-overlay-bottom uk-ignore">
-					<h3>{{ cat.text }}</h3>
-					{% if cat.text == "Έμπνευση" %}
-						Ιδέες για το χώρο σας
-					{% else %}
-						Δείτε τα {{ cat.text }}
-					{% endif %}
+					<h3>Χρώματα</h3>
+					
+						Δείτε τα Χρώματα
+					
 				</div>
-				<a class="uk-position-cover" href="{{ cat.url | prepend: site.baseurl }}"></a>
+				<a class="uk-position-cover" href="/vernilac//colors.html"></a>
 			</figure>
 		</div>
-	{% endfor %}
+	
+		
+		<div class="uk-width-medium-1-2 uk-grid-margin">
+			<figure class="uk-overlay uk-overlay-hover">
+				<img class="uk-overlay-scale" src="/vernilac//img/home/banner-inspiration.jpg">
+				<div class="uk-overlay-panel uk-overlay-background uk-overlay-bottom uk-ignore">
+					<h3>Έμπνευση</h3>
+					
+						Ιδέες για το χώρο σας
+					
+				</div>
+				<a class="uk-position-cover" href="/vernilac//inspiration.html"></a>
+			</figure>
+		</div>
+	
+		
+		<div class="uk-width-medium-1-2 uk-grid-margin">
+			<figure class="uk-overlay uk-overlay-hover">
+				<img class="uk-overlay-scale" src="/vernilac//img/home/banner-products.jpg">
+				<div class="uk-overlay-panel uk-overlay-background uk-overlay-bottom uk-ignore">
+					<h3>Προϊόντα</h3>
+					
+						Δείτε τα Προϊόντα
+					
+				</div>
+				<a class="uk-position-cover" href="/vernilac//products.html"></a>
+			</figure>
+		</div>
+	
+		
+		<div class="uk-width-medium-1-2 uk-grid-margin">
+			<figure class="uk-overlay uk-overlay-hover">
+				<img class="uk-overlay-scale" src="/vernilac//img/home/banner-tips.jpg">
+				<div class="uk-overlay-panel uk-overlay-background uk-overlay-bottom uk-ignore">
+					<h3>Tips</h3>
+					
+						Δείτε τα Tips
+					
+				</div>
+				<a class="uk-position-cover" href="/vernilac//tips.html"></a>
+			</figure>
+		</div>
+	
 </div>
 <div class="uk-block">
 	<h3 class="uk-text-center">Color Trends</h3>
@@ -53,3 +296,188 @@ title: Home
 		</div>
 	</div>
 </div>
+
+  </div>
+  <div id="tm-footer" class="uk-block uk-block-secondary">
+    <div class="uk-hidden-small">
+	<div class="uk-grid">
+		<div class="uk-width-2-5">
+			<div class="uk-grid">
+				<div class="uk-width-1-2">
+					<h4>About us</h4>
+					<ul class="uk-nav uk-nav-side tm-padding-horizontal-remove">
+						
+							<li><a href="/vernilac//about-us.html">Η εταιρεία</a></li>
+						
+							<li><a href="/vernilac//">Επικοινωνία</a></li>
+						
+							<li><a href="/vernilac//">Πολιτική απορρήτου</a></li>
+						
+							<li><a href="/vernilac//">Όροι και προϋποθέσεις</a></li>
+						
+					</ul>
+				</div>
+				<div class="uk-width-1-2">
+					<h4>Quick Links</h4>
+					<ul class="uk-nav uk-nav-side tm-padding-horizontal-remove">
+						
+							<li><a href="/vernilac//colors.html">Χρώματα</a></li>
+						
+							<li><a href="/vernilac//inspiration.html">Έμπνευση</a></li>
+						
+							<li><a href="/vernilac//products.html">Προϊόντα</a></li>
+						
+							<li><a href="/vernilac//tips.html">Tips</a></li>
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="uk-width-3-5">
+			<div class="uk-grid">
+				<div class="uk-width-1-2">
+					<h4>Athens Store Locator</h4>
+					<address>
+						27 χλμ. Π.Ε.Ο. Αθηνών – Θηβών,<br/>
+						196 00 Μάνδρα, Αττικής<br/><br/>
+						Τηλ.: 210 55 56 691-2, 210 55 56 696-7<br/>
+						Fax: 210 55 56 610<br/>
+						e-mail: sales@vernilac.gr
+					</address>
+				</div>
+				<div class="uk-width-1-2">
+					<h4>Thessaloniki Store Locator</h4>
+					<address>
+						ΚΩΝΣΤΑΝΤΙΝΟΥΠΟΛΕΩΣ 12,<br/>
+						ΑΓΡ. ΠΕΡΙΟΧΗ ΔΙΑΒΑΤΩΝ,<br/>
+						ΘΕΣ/ΝΙΚΗ 546 28, Τ.Θ. 1538<br/><br/>
+						Τηλ.: 2310 789840-41, 2310 789831,<br/>
+						Fax: 2310 789849
+					</address>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+    <ul class="uk-nav uk-nav-parent-icon uk-link-muted uk-visible-small" data-uk-nav="{multiple:true}">
+	<li class="uk-parent">
+		<a href="#" class="uk-text-bold">Quick Links</a>
+		<ul class="uk-nav-sub">
+			
+				<li><a href="/vernilac//colors.html">Χρώματα</a></li>
+			
+				<li><a href="/vernilac//inspiration.html">Έμπνευση</a></li>
+			
+				<li><a href="/vernilac//products.html">Προϊόντα</a></li>
+			
+				<li><a href="/vernilac//tips.html">Tips</a></li>
+			
+		</ul>
+	</li>
+	<li class="uk-parent">
+		<a href="#" class="uk-text-bold">About us</a>
+		<ul class="uk-nav-sub">
+			
+				<li><a href="/vernilac//about-us.html">Η εταιρεία</a></li>
+			
+				<li><a href="/vernilac//">Επικοινωνία</a></li>
+			
+				<li><a href="/vernilac//">Πολιτική απορρήτου</a></li>
+			
+				<li><a href="/vernilac//">Όροι και προϋποθέσεις</a></li>
+			
+		</ul>
+	</li>
+	<li class="uk-parent">
+		<a href="#" class="uk-text-bold">Athens Store Locator</a>
+		<ul class="uk-nav-sub">
+			<li>
+				<address>
+					27 χλμ. Π.Ε.Ο. Αθηνών – Θηβών,<br/>
+					196 00 Μάνδρα, Αττικής<br/><br/>
+					Τηλ.: 210 55 56 691-2, 210 55 56 696-7<br/>
+					Fax: 210 55 56 610<br/>
+					e-mail: sales@vernilac.gr
+				</address>
+			</li>
+		</ul>
+	</li>
+	<li class="uk-parent">
+		<a href="#" class="uk-text-bold">Thessaloniki Store Locator</a>
+		<ul class="uk-nav-sub">
+			<li>
+				<address>
+					ΚΩΝΣΤΑΝΤΙΝΟΥΠΟΛΕΩΣ 12,<br/>
+					ΑΓΡ. ΠΕΡΙΟΧΗ ΔΙΑΒΑΤΩΝ,<br/>
+					ΘΕΣ/ΝΙΚΗ 546 28, Τ.Θ. 1538<br/><br/>
+					Τηλ.: 2310 789840-41, 2310 789831,<br/>
+					Fax: 2310 789849
+				</address>
+			</li>
+		</ul>
+	</li>
+</ul>
+  </div>
+
+</div>
+
+
+
+<script src="/vernilac//js/jquery.min.js"></script>
+<script src="/vernilac//js/uikit.min.js"></script>
+<script src="/vernilac//js/slideset.min.js"></script>
+
+
+<script src="/vernilac//js/holder.min.js"></script>
+<script src="/vernilac//js/slideshow.min.js"></script>
+
+
+<script type="text/javascript">
+
+  $("body").on("click", '.uk-close', function(e) {
+    e.preventDefault();
+    console.log(e);
+    $(this).parent().remove();
+    return false;
+  });
+
+  $('.color-grid > li > a').click(function (e) {
+    e.preventDefault();
+    var $this= $(this),
+    $colorGrid = $this.closest(".color-grid"),
+      id = $this.attr("href"),  // #A1
+      $color = $(id).clone(),
+      $siblings = $colorGrid.siblings();
+      $siblings.filter(".color-description").remove();
+      $color.insertAfter($colorGrid);
+  });
+
+</script>
+
+<script type="text/javascript">
+    $.fn.contrastColor = function() {
+      return this.each(function() {
+        var bg = $(this).css('background-color');
+        if(bg == 'transparent' || bg == 'rgba(0, 0, 0, 0)') { 
+          $(this).parents().each(function(){
+            bg = $(this).css('background-color')
+            if(bg != 'transparent' && bg != 'rgba(0, 0, 0, 0)') return false; 
+          });
+          if(bg == 'transparent' || bg == 'rgba(0, 0, 0, 0)') return false;
+        }
+        var rgb = bg.replace(/^(rgb|rgba)\(/,'').replace(/\)$/,'').replace(/\s/g,'').split(',');
+        var yiq = ((rgb[0]*299)+(rgb[1]*587)+(rgb[2]*114))/1000;
+        if(yiq >= 128) $(this).removeClass('uk-contrast');
+        else $(this).addClass('uk-contrast');
+      });
+    };
+    
+    $('.color-description').contrastColor();
+    $('.color-trigger').contrastColor();
+
+</script>
+
+
+</body>
+
+</html>
