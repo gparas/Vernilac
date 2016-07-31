@@ -2,9 +2,9 @@
 layout: page
 ---
 
-<div id="tm-product-page" class="uk-grid">
+<div class="uk-grid">
   <div class="uk-width-3-10">
-    <img class="uk-align-left" src="{{ page.image_path | prepend: site.github.url }}" alt="{{ page.title }}">
+    <img class="uk-align-left" src="{{ page.image_path | prepend: site.baseurl }}" alt="{{ page.title }}">
   </div>
   <div class="uk-width-7-10">
     <h2>{{ page.title }}</h2>
@@ -12,5 +12,5 @@ layout: page
   </div>
 </div>
 
-
 {{ content }}
+

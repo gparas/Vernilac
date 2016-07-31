@@ -3,7 +3,7 @@
 		<a href="#" class="uk-text-bold">Quick Links</a>
 		<ul class="uk-nav-sub">
 			{% for item in site.data.menu.main-menu %}
-				<li><a href="{{ item.url | prepend: site.github.url }}">{{ item.text }}</a></li>
+				<li><a href="{{ item.url | prepend: site.baseurl }}">{{ item.text }}</a></li>
 			{% endfor %}
 		</ul>
 	</li>
@@ -11,7 +11,7 @@
 		<a href="#" class="uk-text-bold">About us</a>
 		<ul class="uk-nav-sub">
 			{% for item in site.data.menu.secondary-menu %}
-				<li><a href="{{ item.url | prepend: site.github.url }}">{{ item.text }}</a></li>
+				<li><a href="{{ item.url | prepend: site.baseurl }}">{{ item.text }}</a></li>
 			{% endfor %}
 		</ul>
 	</li>

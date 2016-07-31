@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: page
 title: acrylic
 header: Χρώματα ανά χρήση
 lead: Βρείτε το χρώμα που σας εμπνέει
 overlay: true
+bg_image: /img/pages/products.jpg
 ---
 <div class="uk-width-large-3-4 uk-align-center uk-margin-large-bottom">
   <p class="uk-text-large uk-text-center">
@@ -22,7 +23,7 @@ overlay: true
   </p>
 </div>
 <div class="uk-width-large-1-1 uk-align-center">
-  <div class="uk-grid uk-grid-small uk-grid-width-medium-1-3 uk-grid-match uk-margin-large">
+  <div class="uk-grid uk-grid-small uk-grid-width-medium-1-2 uk-grid-match uk-margin-large">
     {% for cat in site.data.menu.product-menu %}
     {% assign src = cat.url  | remove_first: "/" | replace: '.html', '' %}
     <div class="uk-grid-margin">
@@ -31,7 +32,7 @@ overlay: true
         <div class="uk-overlay-panel uk-overlay-background uk-overlay-bottom uk-ignore">
           <h4>{{ cat.text }}</h4>
         </div>
-        <a class="uk-position-cover" href="{{ cat.url | prepend: site.github.url }}"></a>
+        <a class="uk-position-cover" href="{{ cat.url | prepend: site.baseurl }}"></a>
       </figure>
     </div>
     {% endfor %}

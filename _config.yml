@@ -3,10 +3,9 @@ title: Vernilac - Think Differently
 email: parageos@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   VERNILAC S.A. is one of the largest producers of paints & varnishes in GREECE and its trademark is identified with high quality products.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+baseurl: "/vernilac/" # the subpath of your site, e.g. /blog/
+url: "" # the base hostname & protocol for your site
+github_username:  gparas
 
 # Build settings
 markdown: kramdown
@@ -22,8 +21,8 @@ gems:
   - modulo.filter
 
 sass:
-  sass_dir:          bower_components/uikit/scss
-  style:            :compressed
+  sass_dir:  bower_components/uikit/scss
+  style:     :compressed
 
 collections:
   acrylics:
@@ -33,7 +32,7 @@ collections:
   primers:
     output: true
   woods:
-    output: true
+    output: trueon
   wood-primers:
     output: true
   metals: 

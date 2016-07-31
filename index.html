@@ -8,7 +8,7 @@ title: Home
 		{% assign src = cat.url  | remove_first: "/" | replace: '.html', '' %}
 		<div class="uk-width-medium-1-2 uk-grid-margin">
 			<figure class="uk-overlay uk-overlay-hover">
-				<img class="uk-overlay-scale" src="{{ site.github.url }}/img/home/banner-{{ src }}.jpg">
+				<img class="uk-overlay-scale" src="{{ site.baseurl }}/img/home/banner-{{ src }}.jpg">
 				<div class="uk-overlay-panel uk-overlay-background uk-overlay-bottom uk-ignore">
 					<h3>{{ cat.text }}</h3>
 					{% if cat.text == "Έμπνευση" %}
@@ -17,7 +17,7 @@ title: Home
 						Δείτε τα {{ cat.text }}
 					{% endif %}
 				</div>
-				<a class="uk-position-cover" href="{{ cat.url | prepend: site.github.url }}"></a>
+				<a class="uk-position-cover" href="{{ cat.url | prepend: site.baseurl }}"></a>
 			</figure>
 		</div>
 	{% endfor %}
