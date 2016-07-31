@@ -13,21 +13,33 @@
       </div>
       <nav class="uk-navbar">
         <ul class="uk-navbar-nav">
-          {% for item in site.data.menu.main-menu %}
-            {% if item.submenu != null %}
-            <li class="uk-parent {% if item.url == page.url %}uk-active{% endif %}" data-uk-dropdown >
-              <a href="{{ item.url | prepend: site.baseurl }}">{{ item.text }}</a>
-              <div class="uk-hidden">
-                <ul class="uk-nav uk-nav-navbar">
-                  {% for subitem in item.submenu %}
-                  <li><a href="{{ subitem.url | prepend: site.baseurl }}">{{ subitem.text }}</a></li>
+          {% for nav in site.data.nav %}
+            {% if nav.subcategories != null %}
+            <li class="uk-parent {% if nav.url == page.url %}uk-active{% endif %}" data-uk-dropdown="{justify:'#tm-nav'}" >
+              <a href="{{ nav.url | prepend: site.baseurl }}">{{ nav.title }}</a>
+              <div class="uk-dropdown uk-dropdown-width-4 uk-dropdown-navbar">
+                <div class="uk-grid uk-dropdown-grid">
+                  <div class="uk-width-1-4">
+                    <img src="/img/menu/img_products.jpg">
+                  </div>
+                  {% for subcategory in nav.subcategories %}
+                    {% capture modulo %}{{ forloop.index0 | mod:2 }}{% endcapture %}
+                    {% if modulo == '0' or forloop.first %}
+                    <div class="uk-width-1-4">
+                      <ul class="uk-nav uk-nav-navbar">
+                      {% endif %}
+                        <li><a href="{{ subcategory.url | prepend: site.baseurl }}">{{ subcategory.title }}</a></li>
+                      {% if modulo == '1' or forloop.last %}
+                      </ul>
+                    </div>
+                    {% endif %}
                   {% endfor %}
-                </ul>
+                </div>
               </div>
             </li>
             {% else %}
-            <li {% if item.url == page.url %}class="uk-active"{% endif %} >
-              <a href="{{ item.url | prepend: site.baseurl }}">{{ item.text }}</a>
+            <li class="uk-parent {% if nav.url == page.url %}uk-active{% endif %}">
+              <a href="{{ nav.url | prepend: site.baseurl }}">{{ nav.title }}</a>
             </li>
             {% endif %}
           {% endfor %}

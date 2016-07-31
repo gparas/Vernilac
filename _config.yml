@@ -4,8 +4,6 @@ email: parageos@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   VERNILAC S.A. is one of the largest producers of paints & varnishes in GREECE and its trademark is identified with high quality products.
 baseurl: "/vernilac/" # the subpath of your site, e.g. /blog/
-url: "" # the base hostname & protocol for your site
-github_username:  gparas
 
 # Build settings
 markdown: kramdown
@@ -16,9 +14,6 @@ exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
-
-gems:
-  - modulo.filter
 
 sass:
   sass_dir:  bower_components/uikit/scss
@@ -32,7 +27,7 @@ collections:
   primers:
     output: true
   woods:
-    output: trueon
+    output: true
   wood-primers:
     output: true
   metals: 

@@ -7,27 +7,33 @@ lead: Χρωματολόγιο
 
 
 {% for color in site.data.colors.creations %}
-
-	{% capture modulo %}{{ forloop.index0 | mod:18 }}{% endcapture %}
-
-	{% if modulo == '0' or forloop.first %}
-	<ul class="color-grid uk-clearfix" role="tablist">
-	{% endif %}
-
-		<li role="presentation">
-			<a class="color-trigger" href="#{{ color.code }}" aria-controls="{{ color.code }}" role="tab" data-toggle="tab" style="background-color: rgb({{ color.rgb }});">
-				<span class="sr-only">{{ color.code }}</span>
-			</a>
-		</li>
-
-	{% if modulo == '17' or forloop.last %}
-	</ul>
-	{% endif %}
-
-	
-
+  {% capture modulo %}{{ forloop.index0 | mod:18 }}{% endcapture %}
+  {% if modulo == '0' or forloop.first %}
+  <ul class="color-grid uk-clearfix" role="tablist">
+  {% endif %}
+      <li role="presentation">
+       <a class="color-trigger" href="#{{ color.code }}" aria-controls="{{ color.code }}" role="tab" data-toggle="tab" style="background-color: rgb({{ color.rgb }});">
+        <span class="sr-only">{{ color.code }}</span>
+      </a>
+    </li>
+  {% if modulo == '17' or forloop.last %}
+  </ul>
+  {% endif %}
 {% endfor %}
 
+<div class="tab-content">
+  {% for color in site.data.colors.creations  %}
+    <div class="tab-pane uk-panel-space color-description" id="{{ color.code }}" style="background-color: rgb({{ color.rgb }});">
+      <a class="uk-close uk-float-right" href="#"></a>
+      <h3 class="uk-margin-top-remove">{{ color.title-GR }}</h3>
+      <h3>{{ color.code }}</h3>
+      <p>Κωδικοί προϊόντων:</p>
+      <p class="relevant-products">{{ color.products | replace: ',', ' <br>' }}</p>
+    </div>
+  {% endfor %}
+</div>
+
+{% comment %}
 <div class="uk-hidden">
 	{% for color in site.data.colors.creations  %}
 	<div class="uk-panel uk-panel-space" id="{{ color.code }}" style="background-color: rgb({{ color.rgb }});">
@@ -39,3 +45,4 @@ lead: Χρωματολόγιο
 	</div>
 	{% endfor %}
 </div>
+{% endcomment %}

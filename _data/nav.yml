@@ -1,14 +1,22 @@
-- title: Βασικό Μενού
-  items:
-  - colors
-  - inspiration
-  - products
-  - tips
+- title: "Χρώματα"
+  url: "/colors.html"
 
-- title: Προϊόντα
-  items:
-  - acrylics
-  - emulsions
-  - primers
-  - woods
-  - metals
+- title: "Έμπνευση"
+  url: "/inspiration.html"
+
+- title: "Προϊόντα"
+  url: "/products.html"
+  subcategories:
+    - title: "Εξωτερικούς Χώρους"
+      url: "/acrylics.html"
+    - title: "Εσωτερικούς Χώρους"
+      url: "/emulsions.html"
+    - title: "Υποστρώματα – Αστάρια τοίχων"
+      url: "/primers.html"
+    - title: "Ξύλινες Επιφάνειες"
+      url: "/woods.html"
+    - title: "Μεταλλικές Επιφάνειες"
+      url: "/metals.html"
+
+- title: "Tips"
+  url: "/tips.html"

@@ -10,48 +10,45 @@
 
 <script type="text/javascript">
 
-	$("body").on("click", '.close-tab', function(e) {
-		e.preventDefault();
-		console.log(e);
-		$(this).parent().remove();
-		return false;
-	});
+  $("body").on("click", '.uk-close', function(e) {
+    e.preventDefault();
+    console.log(e);
+    $(this).parent().remove();
+    return false;
+  });
 
-	$('.color-grid > li > a').click(function(e) {
-		e.preventDefault();
-		var $this= $(this),
-		$colorGrid = $this.closest(".color-grid"),
-			id = $this.attr("href"),
-			$color = $(id).clone(),
-			$siblings = $colorGrid.siblings();
+  $('.color-grid > li > a').click(function (e) {
+    e.preventDefault();
+    var $this= $(this),
+    $colorGrid = $this.closest(".color-grid"),
+      id = $this.attr("href"),  // #A1
+      $color = $(id).clone(),
+      $siblings = $colorGrid.siblings();
+      $siblings.filter(".color-description").remove();
+      $color.insertAfter($colorGrid);
+  });
 
-			$siblings.filter(".color-description").remove();
-			$color.insertAfter($colorGrid);
-		});
+</script>
 
-	
-
-	$.fn.contrastColor = function() {
-		return this.each(function() {
-			var bg = $(this).css('background-color');
-			//use first opaque parent bg if element is transparent
-			if(bg == 'transparent' || bg == 'rgba(0, 0, 0, 0)') { 
-				$(this).parents().each(function(){
-					bg = $(this).css('background-color')
-					if(bg != 'transparent' && bg != 'rgba(0, 0, 0, 0)') return false; 
-				});
-				//exit if all parents are transparent
-				if(bg == 'transparent' || bg == 'rgba(0, 0, 0, 0)') return false;
-			}
-			//get r,g,b and decide
-			var rgb = bg.replace(/^(rgb|rgba)\(/,'').replace(/\)$/,'').replace(/\s/g,'').split(',');
-			var yiq = ((rgb[0]*299)+(rgb[1]*587)+(rgb[2]*114))/1000;
-			if(yiq >= 128) $(this).removeClass('uk-contrast');
-			else $(this).addClass('uk-contrast');
-		});
-	};
-
-	$('.color-description').contrastColor();
-	$('.color-trigger').contrastColor();
+<script type="text/javascript">
+    $.fn.contrastColor = function() {
+      return this.each(function() {
+        var bg = $(this).css('background-color');
+        if(bg == 'transparent' || bg == 'rgba(0, 0, 0, 0)') { 
+          $(this).parents().each(function(){
+            bg = $(this).css('background-color')
+            if(bg != 'transparent' && bg != 'rgba(0, 0, 0, 0)') return false; 
+          });
+          if(bg == 'transparent' || bg == 'rgba(0, 0, 0, 0)') return false;
+        }
+        var rgb = bg.replace(/^(rgb|rgba)\(/,'').replace(/\)$/,'').replace(/\s/g,'').split(',');
+        var yiq = ((rgb[0]*299)+(rgb[1]*587)+(rgb[2]*114))/1000;
+        if(yiq >= 128) $(this).removeClass('uk-contrast');
+        else $(this).addClass('uk-contrast');
+      });
+    };
+    
+    $('.color-description').contrastColor();
+    $('.color-trigger').contrastColor();
 
 </script>

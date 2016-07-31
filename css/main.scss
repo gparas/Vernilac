@@ -105,6 +105,7 @@ $article-title-line-height:  36px;
 // Common
 @import "core/animation";
 @import "core/overlay";
+@import "core/close";
 @import "core/column";
 
 // JavaScript
@@ -205,13 +206,13 @@ table{
   z-index: 4;
 
   @media (min-width: 768px){
-    padding-left: 50px;
-    padding-right: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
   }
 
   @media (min-width: 1200px){
-    padding-left: $block-large-padding-vertical-large;
-    padding-right: $block-large-padding-vertical-large;
+    margin-left: $block-large-padding-vertical-large;
+    margin-right: $block-large-padding-vertical-large;
   }
 }
 
@@ -359,16 +360,18 @@ $colors: (
   border: 0;
 }
 
+$color-grid-space: 2px;
+
 .color-grid {
   padding: 0;
-  margin: 0;
+  margin: 0 -$color-grid-space;
   list-style: none;
 
   > li{
     float: left;
     width: (100% / 18);
-    height: 60px;
-    padding: 1px;
+    height: 54px;
+    padding: $color-grid-space;
     box-sizing: border-box;
 
     > a.color-trigger {
@@ -378,6 +381,10 @@ $colors: (
       height: 100%;
     }
   }
+}
+
+.tab-content > .tab-pane {
+    display: none;
 }
 
 // Utility
