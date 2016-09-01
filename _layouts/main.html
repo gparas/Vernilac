@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+<div class="uk-width-large-9-10 uk-align-center">
+  {% if page.type != null %}
+  <h2 class="uk-article-title">{{ page.type }}</h2>
+  <hr class="uk-article-divider">
+  {% endif %}
+  <div id="tm-product-page">
+    {{ content }}
+  </div>
+</div>

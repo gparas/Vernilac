@@ -20,7 +20,9 @@
               <div class="uk-dropdown uk-dropdown-width-4 uk-dropdown-navbar">
                 <div class="uk-grid uk-dropdown-grid">
                   <div class="uk-width-1-4">
-                    <img src="/img/menu/img_products.jpg">
+                    <a href="{{ site.baseurl }}/products.html">
+                      <img src="{{ site.baseurl }}/img/menu/img_products.jpg">
+                    </a>
                   </div>
                   {% for subcategory in nav.subcategories %}
                     {% capture modulo %}{{ forloop.index0 | mod:2 }}{% endcapture %}

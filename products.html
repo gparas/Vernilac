@@ -1,17 +1,16 @@
 ---
-layout: page
-title: acrylic
+layout: main
+title: Color Therapy
 header: Χρώματα ανά χρήση
-lead: Βρείτε το χρώμα που σας εμπνέει
-overlay: true
+lead: Βρε μανία με το χρώμα!
 bg_image: /img/pages/products.jpg
 ---
-<div class="uk-width-large-3-4 uk-align-center uk-margin-large-bottom">
+<div class="uk-align-center uk-margin-large-bottom">
   <p class="uk-text-large uk-text-center">
     Κάθε σπίτι έχει το δικό του χρώμα, τη δική του αισθητική.
   </p>
 </div>
-<div class="uk-width-large-3-4 uk-align-center uk-column-medium-1-2">
+<div class="uk-align-center uk-column-medium-1-2 uk-margin-large-bottom">
   <p>
     Το σπίτι σας θέλετε να είναι μοναδικό, διαφορετικό, γεμάτο ζωντάνια. Θέλετε να έχει τα χρώματα που σας εμπνέουν, που σας κάνουν να ζείτε όμορφα, ξένοιαστα, να ταιριάζουν με το γούστο και την αισθητική σας.
   </p>
@@ -27,19 +26,15 @@ bg_image: /img/pages/products.jpg
     {% for cat in site.data.menu.product-menu %}
     {% assign src = cat.url  | remove_first: "/" | replace: '.html', '' %}
     <div class="uk-grid-margin">
-      <figure class="uk-overlay uk-overlay-hover">
-        <img class="uk-overlay-scale" src="img/pages/products/banner-{{ src }}.jpg">
-        <div class="uk-overlay-panel uk-overlay-background uk-overlay-bottom uk-ignore">
-          <h4>{{ cat.text }}</h4>
-        </div>
+      <figure class="uk-overlay">
+        <img src="img/pages/products/banner-{{ src }}.jpg">
+        <figcaption class="uk-overlay-panel">
+          <h3 class="uk-h2">{{ cat.text }}</h3>
+          <p>Βρείτε το χρώμα που σας εμπνέει</p>
+        </figcaption>
         <a class="uk-position-cover" href="{{ cat.url | prepend: site.baseurl }}"></a>
       </figure>
     </div>
     {% endfor %}
   </div>
 </div>
-
-{% assign related-product = site.data.paint.emulsion.data %}
-{% assign related-product-count = 6 %}
-{% include related-products.html %}
-
