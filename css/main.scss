@@ -189,11 +189,19 @@ table{
 }
 
 #tm-hero{
-  height: 500px;
+  height: 300px;
+
+  @media (min-width: 1200px){
+    height: 500px;
+  }
 }
 
 #tm-footer{
-  color: #969696;
+  color: #666;
+
+  address{
+    color: #666;
+  }
 
   a{
     color: #969696;
@@ -206,6 +214,11 @@ table{
 
 // tm-nav
 // --------------------------------------------------
+
+.uk-navbar-toggle{
+  height: 32px;
+  padding-right: 0;
+}
 
 #tm-nav{
   z-index: 4;
@@ -228,7 +241,7 @@ table{
 #tm-nav-mobile{
   position: relative;
   box-sizing: border-box;
-  padding: 15px 25px 20px;
+  padding: 15px 20px 20px;
   background: $block-secondary-background;
   z-index: 4;
 }

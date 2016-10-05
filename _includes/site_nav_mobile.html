@@ -1,32 +1,28 @@
 <div id="tm-nav-mobile" class="uk-hidden-large">
     <div class="uk-flex uk-flex-middle uk-flex-space-between">
-      <a href="{{ site.github.url }}/"><img src="{{ site.github.url }}/img/logo.svg" width="240"></a>
-      <a href="#my-id" data-uk-offcanvas>open</a>
+      <a href="{{ site.github.url }}/"><img src="{{ site.baseurl }}/img/logo.svg" width="240"></a>
+      <a href="#my-id" class="uk-navbar-toggle" data-uk-offcanvas></a>
     </div>
 </div>
 
 <div id="my-id" class="uk-offcanvas">
     <div class="uk-offcanvas-bar uk-offcanvas-bar-flip">
-        <ul class="uk-nav uk-nav-offcanvas" data-uk-nav>
-          {% for item in site.data.menu.main-menu %}
-            {% if item.submenu != null %}
-            <li class="uk-parent {% if item.url == page.url %}uk-active{% endif %}" data-uk-dropdown >
-              <a href="{{ item.url | prepend: site.github.url }}">{{ item.text }}</a>
+        <ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav >
+          {% for nav in site.data.nav %}
+            {% if nav.subcategories != null %}
+            <li class="uk-parent {% if item.url == page.url %}uk-active{% endif %}">
+              <a href="#">{{ nav.title }}</a>
               <ul class="uk-nav-sub">
-                {% for subitem in item.submenu %}
-                <li><a href="{{ subitem.url | prepend: site.github.url }}">{{ subitem.text }}</a></li>
+                {% for subcategory in nav.subcategories %}
+                <li><a href="{{ subcategory.url | prepend: site.baseurl }}">{{ subcategory.title }}</a></li>
                 {% endfor %}
               </ul>
             </li>
             {% else %}
             <li {% if item.url == page.url %}class="uk-active"{% endif %} >
-              <a href="{{ item.url | prepend: site.github.url }}">{{ item.text }}</a>
+              <a href="{{ nav.url | prepend: site.baseurl }}">{{ nav.title }}</a>
             </li>
             {% endif %}
-          {% endfor %}
-
-          {% for item in site.data.menu.secondary-menu %}
-            <li><a href="{{ item.url | prepend: site.github.url }}">{{ item.text }}</a></li>
           {% endfor %}
         </ul>
     </div>
